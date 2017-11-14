@@ -1,6 +1,3 @@
-/**
- * Created by hermanwu on 11/11/17.
- */
 public class UniquePaths {
     public int uniquePath(int m, int n) {
         int[][] f = new int[m][n];
