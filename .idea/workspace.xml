@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dce03ddd-1582-4bf0-9a23-b5bc512e8fba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/READEME.ME" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UniquePaths.java" afterPath="$PROJECT_DIR$/src/UniquePaths.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WiggleSort.java" afterPath="$PROJECT_DIR$/src/WiggleSort.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/READEME.ME" afterPath="$PROJECT_DIR$/READEME.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="READEME.ME" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/READEME.ME">
+      <file leaf-file-name="READEME.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/READEME.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="4" lean-forward="true" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -952,12 +949,12 @@
       <workItem from="1489116515027" duration="11463000" />
       <workItem from="1489385921178" duration="16000" />
       <workItem from="1510107618911" duration="25775000" />
-      <workItem from="1510523880965" duration="20506000" />
+      <workItem from="1510523880965" duration="20565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62739000" />
+    <option name="totallyTimeSpent" value="62798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1672" height="1011" extended-state="0" />
@@ -1425,10 +1422,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/READEME.ME">
+    <entry file="file://$PROJECT_DIR$/READEME.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="true" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
         </state>
       </provider>
