@@ -3,7 +3,6 @@
 public class CoinChange {
     public static void main(String[] args) {
         CoinChange cc = new CoinChange();
-
     }
 
     public int coinChange(int[] A, int M) {
