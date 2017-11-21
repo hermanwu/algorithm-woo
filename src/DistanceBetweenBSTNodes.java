@@ -1,21 +1,37 @@
 public class DistanceBetweenBSTNodes {
     public TreeNode root;
 
+
+    public static void main(String[] args) {
+        DistanceBetweenBSTNodes distanceBetweenBSTNodes = new DistanceBetweenBSTNodes();
+        TreePrinter tp = new TreePrinter();
+
+        int[] nodes = new int[]{5,6,3,1,2,4};
+
+        TreeNode root = distanceBetweenBSTNodes.buildBst(nodes);
+
+        tp.printTreeNode(root);
+
+        if (distanceBetweenBSTNodes.searchPathLength(nodes, 1, 4 ) == 2) {
+            System.out.println("correct");
+        };
+        if (distanceBetweenBSTNodes.searchPathLength(nodes, 2, 6 ) == 4) {
+            System.out.println("correct");
+        };
+    }
+
     public int searchPathLength(int[] nodes, int node1, int node2) {
         TreeNode root = buildBst(nodes);
 
         TreeNode ancester = lca(root, node1, node2);
 
-        int depth1 = getDepth(root, ancester.val);
-        //System.out.println(depth1);
-
-        int depth2 = getDepth(root, node1);
+        int depth1 = getDepth(ancester, node1);
         //System.out.println(depth2);
 
-        int depth3 = getDepth(root, node2);
+        int depth2 = getDepth(ancester, node2);
         //System.out.println(depth3);
 
-        int result = depth2 + depth3 - 2 * depth1;
+        int result = depth1 + depth2;
 
         return result;
     }
@@ -83,24 +99,6 @@ public class DistanceBetweenBSTNodes {
         }
 
         return left == null ? right : left;
-    }
-
-    public static void main(String[] args) {
-        DistanceBetweenBSTNodes distanceBetweenBSTNodes = new DistanceBetweenBSTNodes();
-        TreePrinter tp = new TreePrinter();
-
-        int[] nodes = new int[]{5,6,3,1,2,4};
-
-        TreeNode root = distanceBetweenBSTNodes.buildBst(nodes);
-
-        tp.printTreeNode(root);
-
-        if (distanceBetweenBSTNodes.searchPathLength(nodes, 1, 4 ) == 2) {
-            System.out.println("correct");
-        };
-        if (distanceBetweenBSTNodes.searchPathLength(nodes, 2, 6 ) == 4) {
-            System.out.println("correct");
-        };
     }
 }
 
