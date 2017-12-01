@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f68280-2eed-4a29-931a-20c2d63af059" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SameTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TreeGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TreeGenerator.java" afterPath="$PROJECT_DIR$/src/TreeGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SameTree.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SameTree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SameTree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -50,12 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeGenerator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TreeGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TreeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#227#228#0" expanded="true" />
+                <element signature="e#284#285#0" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+                <element signature="e#467#468#0" expanded="true" />
+                <element signature="e#538#539#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,7 +125,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#395#396#0" expanded="false" />
+                <element signature="e#443#444#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/SerializeAndDeserializeBST.java" />
         <option value="$PROJECT_DIR$/src/SerializeAndDeserializeBinaryTree.java" />
         <option value="$PROJECT_DIR$/src/SameTree.java" />
+        <option value="$PROJECT_DIR$/src/TreeGenerator.java" />
       </list>
     </option>
   </component>
@@ -235,22 +246,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SerializeAndDeserializeBinaryTree">
-    <configuration default="false" name="CoinChange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="CoinChange" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="codeWoo" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.TreeGenerator">
     <configuration default="false" name="DistanceBetweenBSTNodes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="DistanceBetweenBSTNodes" />
@@ -299,6 +295,21 @@
     <configuration default="false" name="SerializeAndDeserializeBinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="SerializeAndDeserializeBinaryTree" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="codeWoo" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TreeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="TreeGenerator" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -881,19 +892,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CoinChange" />
-      <item index="1" class="java.lang.String" itemvalue="Application.DistanceBetweenBSTNodes" />
-      <item index="2" class="java.lang.String" itemvalue="Application.CountingBits" />
-      <item index="3" class="java.lang.String" itemvalue="Application.LRUCache" />
-      <item index="4" class="java.lang.String" itemvalue="Application.SerializeAndDeserializeBinaryTree" />
+      <item index="0" class="java.lang.String" itemvalue="Application.DistanceBetweenBSTNodes" />
+      <item index="1" class="java.lang.String" itemvalue="Application.CountingBits" />
+      <item index="2" class="java.lang.String" itemvalue="Application.LRUCache" />
+      <item index="3" class="java.lang.String" itemvalue="Application.SerializeAndDeserializeBinaryTree" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TreeGenerator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.SerializeAndDeserializeBinaryTree" />
-        <item index="1" class="java.lang.String" itemvalue="Application.LRUCache" />
-        <item index="2" class="java.lang.String" itemvalue="Application.CountingBits" />
-        <item index="3" class="java.lang.String" itemvalue="Application.DistanceBetweenBSTNodes" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CoinChange" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TreeGenerator" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SerializeAndDeserializeBinaryTree" />
+        <item index="2" class="java.lang.String" itemvalue="Application.LRUCache" />
+        <item index="3" class="java.lang.String" itemvalue="Application.CountingBits" />
+        <item index="4" class="java.lang.String" itemvalue="Application.DistanceBetweenBSTNodes" />
       </list>
     </recent_temporary>
   </component>
@@ -910,12 +921,12 @@
       <workItem from="1511241676347" duration="5566000" />
       <workItem from="1511252214310" duration="2267000" />
       <workItem from="1511336468750" duration="14071000" />
-      <workItem from="1512069478357" duration="2910000" />
+      <workItem from="1512069478357" duration="4906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24814000" />
+    <option name="totallyTimeSpent" value="26810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1672" height="1011" extended-state="0" />
@@ -1318,7 +1329,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#395#396#0" expanded="false" />
+            <element signature="e#443#444#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1338,19 +1352,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TreeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SameTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TreeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
