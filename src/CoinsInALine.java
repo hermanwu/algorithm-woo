@@ -26,6 +26,7 @@ public class CoinsInALine {
             return true;
         }
 
+        // dynamic programming
         boolean[] f = new boolean[n + 1];
 
         // When there is 1 coin, current player wins;
@@ -51,7 +52,7 @@ public class CoinsInALine {
 
         CoinsInALine cc = new CoinsInALine();
 
+        // test case: n = 4 should print true
         System.out.println(cc.firstWillWin(4));
     }
-
 }
