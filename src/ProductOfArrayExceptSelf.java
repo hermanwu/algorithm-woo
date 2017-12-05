@@ -7,7 +7,7 @@
 //
 // Example: given [1,2,3,4], return [24,12,8,6].
 //
-// Key: iterate through array in forwardly and backwardly twice.
+// Key: iterate through array from the beginning and the end.
 //
 // Company: Facebook
 
