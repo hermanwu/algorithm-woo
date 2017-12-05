@@ -1,12 +1,12 @@
 // Input:
 // You have n coins in a line
 //
-// Two player starts to pick up coins from two sides.
-// Each players can pick one either one coin or two coins
-//
+// Two player starts to pick up coins.
+// Each players can pick either one coin or two coins
+// Whoever picks the last coin wins the game, and whoever has no coin left to pick loses the game
 
 // Output:
-// whether the first player will win
+// whether the first player will win (first player picks the last coin)
 
 // Example:
 // n = 4;
