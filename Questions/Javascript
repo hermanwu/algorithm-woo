@@ -1,0 +1,8 @@
+1. What is the difference between double-equals and triple-equals
+
+2. What is the difference between synchronous and asynchronous functions
+
+3. AJAX
+    a. why whould you use it?
+    b. what patterns can we use to wait on an aysnchronous response?
+        i. Promises, observables, Async/await,
