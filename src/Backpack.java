@@ -5,8 +5,6 @@
 // Output:
 // the fewest number of coins that can add together to the amount;
 
-
-
 public class Backpack {
     public static void main(String[] args) {
         Backpack cc = new Backpack();

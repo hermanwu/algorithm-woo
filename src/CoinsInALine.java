@@ -26,7 +26,7 @@ public class CoinsInALine {
             return true;
         }
 
-        // dynamic programming
+        // dynamic programminga
         boolean[] f = new boolean[n + 1];
 
         // When there is 1 coin, current player wins;

@@ -5,4 +5,18 @@
 3. AJAX
     a. why whould you use it?
     b. what patterns can we use to wait on an aysnchronous response?
-        i. Promises, observables, Async/await,
+        i. Promises, observables, Async/await；
+
+4. What is a closure?
+    a. why would you use one?
+
+5. Explain how prototypal inheritance works.
+
+6. Explain how function parameters are passed.
+    a. Primitives vs Objects.
+    b. Call-by-sharing means everything is pased by value but Object properties have a reference to the object.
+
+7. Explain event bubbling:
+    a. I attach an on-click handler to a DIV element.
+    b. That handler sets the DIV to display: none when clicked.
+    c. I also attach an on-click event handler
