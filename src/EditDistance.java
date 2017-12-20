@@ -60,24 +60,27 @@ public class EditDistance {
         int m = w1char.length;
         int n = w2char.length;
 
-        int[] editDistance = new int[n + 1];
+        int[] cur = new int[n + 1];
+        int[] prev = new int[n + 1];
 
         for (j = 0; j <= n; j++) {
-            editDistance[j] = j;
+            prev[j] = j;
         }
 
         for (i = 1; i <= m; i++) {
-            editDistance[0] = i;
+            cur[0] = i;
 
             for (j = 1; j <= n; j++) {
-                if (w1char[i - 1] == w2char[j - 1]) {
-                    editDistance[j] = editDistance[j - 1];
-                }
-                editDistance[j] = Math.min(editDistance[j], editDistance[j - 1] + 1);
+                cur[j] = Math.min(cur[j - 1] + 1, prev[j] + 1);
+                cur[j] = Math.min(cur[j], prev[j - 1] + 1);
 
+                if (w1char[i - 1] == w2char[j - 1]) {
+                    cur[j] = Math.min(prev[j - 1], cur[j]);
+                }
             }
+            prev = cur.clone();
         }
 
-        return editDistance[n];
+        return cur[n];
     }
 }
