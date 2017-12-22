@@ -1,8 +1,5 @@
 import java.util.Arrays;
 
-/**
- * Created by hermanwu on 11/13/17.
- */
 public class KthLargestElementInAnArray {
     public static void main(String[] args) {
         KthLargestElementInAnArray s = new KthLargestElementInAnArray();

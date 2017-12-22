@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class BinaryTreeTraversal {
+public class BinaryTreePreorderTraversal {
     public List<Integer> preorderTraversalRecursive(TreeNode root) {
         List<Integer> result = new ArrayList<>();
 
@@ -67,7 +67,7 @@ public class BinaryTreeTraversal {
     public static void main(String[] args) {
         TreeNode root = TreeGenerator.generateTreeBalanced();
 
-        BinaryTreeTraversal btt = new BinaryTreeTraversal();
+        BinaryTreePreorderTraversal btt = new BinaryTreePreorderTraversal();
 
         System.out.println(Arrays.toString(btt.preorderTraversalRecursive(root).toArray()));
 
