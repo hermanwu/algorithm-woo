@@ -15,11 +15,9 @@ public class RangeSumQueryImmutable {
     }
 
     class NumArray {
-        public int[] nums;
         public int[] preSumArray;
 
         public NumArray(int[] nums) {
-            this.nums = nums;
             this.preSumArray = new int[nums.length + 1];
 
             for (int i = 1; i <= nums.length; i++) {
