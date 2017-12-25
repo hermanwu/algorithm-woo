@@ -34,6 +34,13 @@ public class Printer {
             }
             System.out.println("");
         }
+    }
 
+    public static void printResultComparsion(Object a, Object b) {
+        if (a == b || a.equals(b)) {
+            Printer.print("correct");
+        } else {
+            Printer.print("NOT CORRECT");
+        }
     }
 }
