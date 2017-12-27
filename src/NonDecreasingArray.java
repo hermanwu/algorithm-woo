@@ -37,10 +37,12 @@ public class NonDecreasingArray {
                     return false;
                 }
 
-                // check the previous two numbers
-                if (i >= 2 && nums[i] > nums[i - 2]) {
+                // normal case: you do not want to increase nums[i] to increase the risk of nums[i + 1]
+                if (i < 2 || nums[i] > nums[i - 2]) {
                     nums[i - 1] = nums[i];
-                } else {
+                }
+                // when nums[i] is smaller than both nums[i - 1] and  nums[i - 2], you have to increase nums[i]
+                else {
                     nums[i] = nums[i - 1];
                 }
             }
