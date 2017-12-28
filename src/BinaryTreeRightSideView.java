@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-Givwn a binary tree. Image yourself is on the right side of it. Output the right most node of each level.
+Givwn a binary tree. Image yourself is on the right side of it.
+ Output the right most node of each level.
 
  */
 public class BinaryTreeRightSideView {
