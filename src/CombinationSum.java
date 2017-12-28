@@ -45,7 +45,7 @@ public class CombinationSum {
         }
 
         if (target == 0) {
-            results.add(current);
+            results.add(new ArrayList<>(current));
             return;
         }
 
@@ -53,7 +53,7 @@ public class CombinationSum {
             current.add(candidates[i]);
 
             helper(results,
-                    new ArrayList<Integer>(current),
+                    current,
                     candidates,
                     target - candidates[i],
                     i);
