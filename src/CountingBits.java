@@ -1,5 +1,8 @@
-// Given a non negative integer number num.
-// for each num, calculate the number of 1's in their binary representation and return them as an array.
+/*
+ Given a non negative integer number num.
+ for each num, calculate the number of 1's in their binary representation and return them as an array.
+
+ */
 
 
 import java.util.Arrays;
