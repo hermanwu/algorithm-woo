@@ -23,7 +23,6 @@ public class BinaryTreeInorderTraversal {
         result.add(root.val);
         helper(result, root.right);
     }
-    // --- Recursive way -----
 
 
     //--- Iterative way -----
@@ -49,7 +48,39 @@ public class BinaryTreeInorderTraversal {
 
         return result;
     }
-    //--- Iterative way -----
+
+    // Morris Traversal
+    public List<Integer> inorderMorrisTraversal(TreeNode root) {
+
+        List<Integer> result = new ArrayList<>();
+
+        TreeNode cur = root;
+
+        while (cur != null) {
+            if (cur.left == null) {
+                result.add(cur.val);
+                cur = cur.right;
+            } else {
+                TreeNode pre = cur.left;
+
+                while (pre.right != null && pre.right != cur) {
+                    pre = pre.right;
+                }
+
+                if (pre.right == null) {
+                    pre.right = cur;
+                    cur = cur.left;
+                } else {
+                    pre.right = null;
+                    result.add(cur.val);
+                    cur = cur.right;
+                }
+            }
+        }
+
+        return result;
+    }
+
 
     public static void main(String[] args) {
         TreeNode root = TreeGenerator.generateTreeBalanced();
@@ -59,5 +90,7 @@ public class BinaryTreeInorderTraversal {
         System.out.println(Arrays.toString(btt.inorderTraversalRecursive(root).toArray()));
 
         System.out.println(Arrays.toString(btt.inorderTraversalIterative(root).toArray()));
+
+        System.out.println(Arrays.toString(btt.inorderMorrisTraversal(root).toArray()));
     }
 }
