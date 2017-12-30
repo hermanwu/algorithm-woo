@@ -41,7 +41,6 @@ public class BinaryTreePostorderTraversal {
                 else {
                     cur = temp;
                 }
-
             }
         }
         return result;
