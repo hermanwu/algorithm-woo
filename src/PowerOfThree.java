@@ -17,7 +17,6 @@ public class PowerOfThree {
         Printer.print(p.isPowerOfThree(-9));
 
         Printer.print(p.isPowerOfThree(1));
-
     }
 
 
