@@ -25,6 +25,7 @@ public class BinaryTreePostorderTraversal {
                 // handle all left treenode.
                 cur = cur.left;
             }  else {
+
                 // check right treenode.
                 TreeNode temp = stack.peek().right;
                 if (temp == null) {
@@ -37,6 +38,7 @@ public class BinaryTreePostorderTraversal {
                         result.add(temp.val);
                     }
                 }
+
                 // has more nodes need to process.
                 else {
                     cur = temp;
