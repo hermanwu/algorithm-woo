@@ -27,6 +27,15 @@ public class Printer {
 
     }
 
+    public static void printListNode(ListNode node) {
+        ListNode temp = node;
+        while (temp != null && temp.next != null) {
+            System.out.print(temp.val + "->");
+            temp = temp.next;
+        }
+        System.out.println(temp.val);
+    }
+
     public static void printIntMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
