@@ -28,12 +28,15 @@ public class Printer {
     }
 
     public static void printListNode(ListNode node) {
+        if (node == null) {
+            Printer.print("null");
+        }
+
         ListNode temp = node;
-        while (temp != null && temp.next != null) {
+        while (temp != null) {
             System.out.print(temp.val + "->");
             temp = temp.next;
         }
-        System.out.println(temp.val);
     }
 
     public static void printIntMatrix(int[][] matrix) {
