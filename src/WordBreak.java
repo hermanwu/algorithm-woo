@@ -48,7 +48,7 @@ public class WordBreak {
     }
 
     public boolean wordBreakRecursive(String s, List<String> wordDict) {
-        HashSet<String> set = new HashSet<String>(wordDict);
+        HashSet<String> set = new HashSet<>(wordDict);
 
         int n = s.length(), i;
 
