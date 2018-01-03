@@ -28,23 +28,30 @@ console.log(obj == undefined);
 
 Asynchronous JavaScript And XML.
 
-    a. why whould you use it?
-    b. what patterns can we use to wait on an aysnchronous response?
+a. why whould you use it?
+b. what patterns can we use to wait on an aysnchronous response?
 
  1. Promise:
 
-The Promise object represents the eventual completion (or failure) of an asynchronous operation,
-and its resulting value.
+    The Promise object represents the eventual completion (or failure) of an asynchronous operation,
+    and its resulting value.
 
-new Promise( /* executor */ function(resolve, reject) { ... } );
+    new Promise( /* executor */ function(resolve, reject) { ... } );
 
-Three states: fulfilled, rejected, pending
+    Three states: fulfilled, rejected, pending
 
-        observables,
-        Async/await；
+a. observables,
+
+c. async / await
 
 4. What is a closure?
+
+A closure is the combination of a function and the lexical environment within which that function was declared.
+
     a. why would you use one?
+
+        protect private variable
+
 
 5. Explain how prototypal inheritance works.
 
@@ -60,11 +67,25 @@ Three states: fulfilled, rejected, pending
     e. What happens when I click the BUTTON element?
 
 8 How can we keep our code from leaking into the global scope?
+module loader / requirejs
+immediately invoked function expression
+
 
 9 Tell me about the browser's event loop
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+
     a. What can I use to avoid blocking the main thread with long-running operations?
         i. Web workers
-    b. Tell me about the difference between the call stack and task queue.
 
+    b. Tell me about the difference between the call stack and task queue.
+        a job queue is a queue of things to do (usually store persistant) and a call stack is a stack of routines
+
+        timeout(function(){
+            console.log("one");
+        }, 100);
+
+        console.log("two");
+        in call stack, console.log("one") is triggered first,
+        but in job queue, the result will display after two.
 
 

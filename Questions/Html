@@ -1,7 +1,24 @@
 What are data-attributes used for?
+The data-* attributes is used to store custom data private to the page or application.
+
+The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience (without any Ajax calls or server-side database queries).
 
 a. Extensibility, JS and CSS access
+
+var article = document.getElementById('electriccars');
+
+article.dataset.columns // "3"
+article.dataset.indexNumber // "12314"
+article.dataset.parent // "cars"
+
+article[data-columns='3'] {
+  width: 400px;
+}
+article[data-columns='4'] {
+  width: 600px;
+}
 
 Describe the difference between a cookie and local storage?
 a. When would I use on or the other?
 
+Cookies are small text files that websites place in a browser for tracking or login purposes. Meanwhile, localStorage and sessionStorage are new objects, both of which are storage specifications but vary in scope and duration. Of the two, localStorage is permanent and website-specific whereas sessionStorage only lasts as long as the duration of the longest open tab.
