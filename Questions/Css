@@ -1,0 +1,31 @@
+What is the difference between classes and IDs in css?
+
+How does a browser determine which elements match a CSS selector?
+
+What are some advantages of CSS pre-processors?
+
+What SASS mixins have you written?
+https://scotch.io/tutorials/how-to-use-sass-mixins
+
+a mixin is a block of code that lets us group css declarations we may reuse throughout our site.
+
+@mixin flex {
+    display: flex;
+}
+
+.row {
+    @include flex;
+}
+
+
+@mixin grid($flex) {
+    @if $flex {
+        @include flex;
+    } @else {
+        display: block;
+    }
+}
+
+what are you favorite responsive image techniques?
+
+What experience do you have with Flexbox layout?

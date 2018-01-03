@@ -1,0 +1,12 @@
+What is HTTP methods:
+
+Http
+Stateless
+
+Session
+Server use cookies to retrieve sessions which includes user's information.
+Session sometimes is stored on client to be fast (rail framework)
+
+Cookies:
+Always client-side
+Browser carries the identification

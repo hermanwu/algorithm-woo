@@ -1,11 +1,47 @@
 1. What is the difference between double-equals and triple-equals
 
+==: Abstract Equality Comparison
+===: Strict Equality Comparison
+
+
+var num = 0;
+var obj = new String('0');
+var str = '0';
+
+console.log(num == num); // true
+console.log(obj == obj); // true
+console.log(str == str); // true
+
+console.log(num == obj); // true
+console.log(num == str); // true
+console.log(obj == str); // true
+console.log(null == undefined); // true
+
+// both false, except in rare cases
+console.log(obj == null);
+console.log(obj == undefined);
+
+
 2. What is the difference between synchronous and asynchronous functions
 
 3. AJAX
+
+Asynchronous JavaScript And XML.
+
     a. why whould you use it?
     b. what patterns can we use to wait on an aysnchronous response?
-        i. Promises, observables, Async/await；
+
+ 1. Promise:
+
+The Promise object represents the eventual completion (or failure) of an asynchronous operation,
+and its resulting value.
+
+new Promise( /* executor */ function(resolve, reject) { ... } );
+
+Three states: fulfilled, rejected, pending
+
+        observables,
+        Async/await；
 
 4. What is a closure?
     a. why would you use one?
@@ -14,9 +50,21 @@
 
 6. Explain how function parameters are passed.
     a. Primitives vs Objects.
-    b. Call-by-sharing means everything is pased by value but Object properties have a reference to the object.
+    b. Call-by-sharing means everything is passed by value but Object properties have a reference to the object.
 
 7. Explain event bubbling:
     a. I attach an on-click handler to a DIV element.
     b. That handler sets the DIV to display: none when clicked.
-    c. I also attach an on-click event handler
+    c. I also attach an on-click event handler to a Button element within the DIV.
+    d. That click handler provides a alert with instructions for the page.
+    e. What happens when I click the BUTTON element?
+
+8 How can we keep our code from leaking into the global scope?
+
+9 Tell me about the browser's event loop
+    a. What can I use to avoid blocking the main thread with long-running operations?
+        i. Web workers
+    b. Tell me about the difference between the call stack and task queue.
+
+
+
