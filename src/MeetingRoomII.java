@@ -16,33 +16,27 @@ public class MeetingRoomII {
     }
 
     public int minMeetingRooms(Interval[] intervals) {
-
-        // create a comparator
-        Comparator<Interval> comparatorStart = new Comparator<Interval>() {
-            @Override
-            public int compare(Interval a, Interval b) {
-                return a.start - b.start;
-            }
-        };
-
-        Comparator<Interval> comparatorEnd = new Comparator<Interval>() {
-            @Override
-            public int compare(Interval a, Interval b) {
-                return a.end - b.end;
-            }
-        };
-
-        Arrays.sort(intervals, comparatorStart);
-
-        PriorityQueue<Interval> q = new PriorityQueue<Interval>(intervals.length, comparatorEnd);
-
-        q.offer(intervals[0]);
-
-        for (int i = 0; i < intervals.length; i++) {
-            q.add(intervals[i]);
+        if (intervals == null || intervals.length == 0) {
+            return 0;
         }
 
-        return q.size();
+        // create a comparator
+        Interval[] temp = intervals.clone();
+
+        Arrays.sort(temp, (a, b) -> (a.start - b.start));
+        PriorityQueue<Interval> queue = new PriorityQueue<>((a, b) -> (a.end - b.end));
+
+        int max = 0, n = intervals.length, i;
+
+        for (i = 0; i < n; i++) {
+            while (!queue.isEmpty() && queue.peek().end <= intervals[i].start) {
+                queue.poll();
+            }
+            queue.offer(intervals[i]);
+            max = Math.max(max, queue.size());
+        }
+
+        return max;
     }
 
     public class Interval {

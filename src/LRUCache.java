@@ -2,6 +2,8 @@ import java.util.HashMap;
 
 /**
  * implement following method for an LRU cache;
+ *
+ * Company Amazon
  */
 public class LRUCache {
     private HashMap<Integer, Node> map;
