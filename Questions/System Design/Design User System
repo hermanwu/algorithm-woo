@@ -1,0 +1,16 @@
+ Database & Consistent Hashing
+
+ Functions:
+    Register
+    Sign in
+
+    Profile
+    Friendship
+
+ Write vs Read
+    whether write is more than read
+
+ Service:
+    AuthService
+    UserService
+    FriendshipService

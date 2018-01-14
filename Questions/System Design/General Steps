@@ -1,0 +1,64 @@
+* Write down user case
+
+* Draw data flow
+
+* Clarifying the question
+    Determine the objects in the problem
+    Most important part
+    who is the client
+    what is the purpose
+    what are the requirement
+    How much data scale
+
+* Make assumptions (data)
+
+
+* Build MVP
+API
+Services to write and read data
+Data store
+
+* Complexity / bottleneck
+
+
+
+* Scaling Data read - write / Peak QPS / Infrastructure failure / Security API token
+
+
+
+
+Tools:
+* CDN
+* rate limiter
+* Load balancer
+* Cache updating
+    * if request in cache, return cache[request] (less than 1 ms)
+        * else cache miss -> hit database (100 ms)
+    * store the result of an operation so that future requests return faster
+    * never touch database (the less the better)
+    * downside: complex caching update
+* App Server Scaling
+    * multiple machines
+    * each has its own cache
+    * random or round robin
+* SOA
+* Sharding
+    When database cannot store all the data
+    horizontal scalbilty
+    Each shard can have a lot replicate sets
+    a software control all sharding (shard key)
+    complex querries (range query)
+    joins become difficult
+
+* Microservice
+* Memcache:
+    support many sockets and can handle all requests
+    key - value pair
+    set, get, delete
+    lives on
+* replicate database (after shared)
+    when load is too high
+    Master -> with multiple slaves
+    increase read speed
+    downside does not increase write speed
+    issue: read on slave happens before write on master

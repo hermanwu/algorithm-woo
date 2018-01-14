@@ -1,0 +1,131 @@
+Cloudistics:
+    * App Page optimization
+        * S; Web page has been super low because it has to render query and render hundreds of applications
+        * T: Optimize the page; Optimize database, Optimize front end
+        * A:
+            * Improve database query.
+            * Look into browser and angular technology
+                * reduce two way bindings, one way or one time binding
+                    * use ng-bind, not use ng-if
+                    * only click button add dom only when necessary
+                * lazy loading page
+                    * graudally
+                * Web worker
+                    * one thread.
+                * Caching
+        * R:
+            * page showing result instantly
+            * frame rate return to 60 frame per sec
+    * Make app more stable - ownership - insist on the highest standards
+        * S:
+            * when we reached to first 20 customers. From our sales team, we hear a couple customer complain that our software is not stable
+            * Bugs does not seems to decrease
+            * Everyone hates bugs
+        * T: improve quality of product, reduce bugs
+        * A:
+            * Start to implement the procedure.
+            * Three test case: unit test needs to implement and integration tests need to implements
+            *
+            *
+        * R:
+            * Our team member seems adopt the test procedure quickly
+            * New bug count decreases signcantly
+
+    * Application Service - Invent and Simplify
+        * S: features are coming and UX constantly adding new features and logic
+        * T: make the code more maintainable
+        * A:
+            * Take with the UX team and streamline the actions
+    * App filtering - earn trust of the teammates - mistake
+        * S:
+            * underestimate the page
+            * Too many page to test
+            * PR ready or QA ready
+            * Deadline
+            * Vauge idea of whether should be PR ready or QA ready
+        * A:
+            * Divide project into a more smaller truck, espeically those time senetive
+            * Trust is not earned in one day
+            *
+        * R:
+            * build the exception; meet or exceed the exception
+            * build a good personal relationship. so they dun take your suggestions as offensive
+        * Underestimate the project
+            *
+
+
+
+
+Udacity
+    Implement Suduku. Minmax strategy
+        * Team Guide and Optimizaiton
+        *
+        * All graduate from Nanodegree
+
+
+VMware:
+    * Internal test tool - biggest mistake, obssess with customer, Hire and develop the best
+        *  S: I know you love to build website, when cannot you start to build this website for me.
+        1. R: Monitor stats of 50 person and mintor customer temperature
+        2. Integrate with Zendesk. Limitation of Api
+        3. Build what customer wants
+        * All managers start to ask me to add features
+            *
+    * Technical Account Manager - earn trust of others, disagree and commit
+        * Star of the month.
+        * A lot of customer were asked me to resolve issue for them.
+        *
+
+Cafepress:
+    * Improve message communication
+        *
+    * Situation: Cafepress service department. we start to provide our service to manufacturing process
+    * T: Need to make the message more clear and indicate what to do
+    * A:
+        * Watch whole process of manufacturing process
+        * Use my IE knowledge to streamline the process
+        * Mapping then with database
+    * R:
+        Match clear process rate. Error rate deceases as well.
+
+UPS:
+    Situation:
+        * UPS reached out to us to see if we can improve the process of there airport.
+        * Irregular volume flow cause operation delay and increase 3.1 M excess cost
+        * 130 nightly aircraft arrivals
+        * 155 miles of conveyors. 5.2M sq.ft
+        * 400k packages/hr
+    Task:
+        * Simulate the volume flow of package and optimziate the aircraft arrival schedule.
+    Action:
+        * One of my team member and I (fun fact)
+        * Simulation: data mining
+            * West bounds
+            * Day
+            * 10:00 p.m.
+        * Optimization
+            * Maximize arrival lateness, while keep everything on schedule
+            * Capacity constraints
+            * Deadline constraints
+            * Business constraints
+            * Landing constrains
+         * 3.6 M variables
+         * 2.4 M constraints
+         * < 15 minutes runtime
+        * Validation
+            * finalist
+            * same as UPS team result
+            * cost reduction: 1.7 m
+
+    Result:
+        * 1.7 million.
+        * Optimal scheduling and validation tool.
+        * Same as the UPS simulation tool
+        * cost reduction: 1.7 m
+
+
+Yelp Review Map:
+
+Startup Exchange
+
+Vehicle Competition

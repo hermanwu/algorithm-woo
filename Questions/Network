@@ -8,5 +8,23 @@ Server use cookies to retrieve sessions which includes user's information.
 Session sometimes is stored on client to be fast (rail framework)
 
 Cookies:
-Always client-side
-Browser carries the identification
+    Always client-side
+    Browser carries the identification
+
+Protocol
+    TCP
+        transport layer, setup connection
+        backbone of internet
+        if packets drop, then resend, good with error connection
+    UDP
+        transport layer
+        less latency
+        video call, game
+    SMTP
+        sent email
+    POP
+        receive email
+    HTTP
+        Hypertext transfer proptocal
+    FTP
+        Download and upload file
