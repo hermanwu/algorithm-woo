@@ -32,3 +32,7 @@ a mixin is a block of code that lets us group css declarations we may reuse thro
 what are you favorite responsive image techniques?
 
 What experience do you have with Flexbox layout?
+
+What does '>' mean in css?
+    immediate children.
+    https://stackoverflow.com/questions/4459821/css-selector-what-is-it
