@@ -28,8 +28,8 @@ console.log(obj == undefined);
 
 Asynchronous JavaScript And XML.
 
-a. why whould you use it?
-b. what patterns can we use to wait on an aysnchronous response?
+a. Why would you use it?
+b. what patterns can we use to wait on an asynchronous response?
 
  1. Promise:
 
@@ -59,33 +59,10 @@ A closure is the combination of a function and the lexical environment within wh
     a. Primitives vs Objects.
     b. Call-by-sharing means everything is passed by value but Object properties have a reference to the object.
 
-7. Explain event bubbling:
-    a. I attach an on-click handler to a DIV element.
-    b. That handler sets the DIV to display: none when clicked.
-    c. I also attach an on-click event handler to a Button element within the DIV.
-    d. That click handler provides a alert with instructions for the page.
-    e. What happens when I click the BUTTON element?
-
-8 How can we keep our code from leaking into the global scope?
-module loader / requirejs
-immediately invoked function expression
 
 
-9 Tell me about the browser's event loop
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 
-    a. What can I use to avoid blocking the main thread with long-running operations?
-        i. Web workers
 
-    b. Tell me about the difference between the call stack and task queue.
-        a job queue is a queue of things to do (usually store persistant) and a call stack is a stack of routines
 
-        timeout(function(){
-            console.log("one");
-        }, 100);
-
-        console.log("two");
-        in call stack, console.log("one") is triggered first,
-        but in job queue, the result will display after two.
 
 
