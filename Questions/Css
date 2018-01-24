@@ -36,3 +36,17 @@ What experience do you have with Flexbox layout?
 What does '>' mean in css?
     immediate children.
     https://stackoverflow.com/questions/4459821/css-selector-what-is-it
+
+Give an example of flexbox
+    * four layout module before flexbox
+        * Block, Inline, Table, Positioned
+    * parent element becomes flexible by setting the display property to flex;
+        * flex-direction property
+        * flex-wrap property
+        * flex-flow property
+        * justify-content property (aligns item horizentally)
+        * align-item property: aligns item vertically
+    * child elements:
+        * the flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.
+        * flex-shrink specifies how much a flex item will shrink relative to the rest of the flex items.
+        * flex-basis: specifies the width of a flex item.

@@ -32,6 +32,8 @@
 
         for (let i = 1; i < nums.length; i++) {
             currentMax = Math.max(nums[i], currentMax + nums[i]);
+
+
             globalMax = Math.max(currentMax, globalMax);
         }
 

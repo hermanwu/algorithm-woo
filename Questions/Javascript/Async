@@ -3,3 +3,13 @@ What order does f receive its arguments?
 f("foo");
 setTimeout(function() { f("bar");}, 0);
 f("barz");
+
+
+Create a promise:
+
+var promise = new Promise(function(resolve, reject) {
+   if () {
+       resolve(
+   }
+
+});
