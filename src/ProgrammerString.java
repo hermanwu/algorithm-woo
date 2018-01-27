@@ -33,6 +33,7 @@ public class ProgrammerString {
             left++;
         }
 
+        // re-populate map;
         map = generateCharacterMap("programmer");
 
         while (left < right) {

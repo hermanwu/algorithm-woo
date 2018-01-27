@@ -44,6 +44,7 @@ a. observables,
 
 c. async / await
 
+
 4. What is a closure?
 
 A closure is the combination of a function and the lexical environment within which that function was declared.

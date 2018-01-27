@@ -13,3 +13,24 @@ var promise = new Promise(function(resolve, reject) {
    }
 
 });
+
+how would set the data from a callback and return it to screen?
+
+function greeting(response) {
+    alert('Hello ' + name);
+}
+
+function networkRequest(callback) {
+
+    // network request
+    $http.test.$promise.then(success, failure);
+}
+
+
+if this was returned in a promise how would you do?
+
+
+
+how to  add a click event to a div element using jQuery
+
+

@@ -2,45 +2,31 @@
  * Created by hermanwu on 1/24/18.
  */
 public class ComplementingADNAStrand {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Printer.print(ComplementingADNAStrand.dnaComplement("ACCGGGTTTT"));
     }
 
     static String dnaComplement(String s) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         char[] arr = s.toCharArray();
 
-        reverse(arr);
-
         for (char i : arr) {
-            result += getComplementChar(i);
+            result.append(getComplementChar(i));
         }
 
-        return result;
-    }
-
-    static void reverse(char[] arr) {
-        int left = 0, right = arr.length - 1;
-
-        while (left < right) {
-            char temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
-
-            left++;
-            right--;
-        }
+        return result.reverse().toString();
     }
 
     static char getComplementChar(char c) {
-        if (c == 'A') {
-            return 'T';
-        } else if (c == 'T') {
-            return 'A';
-        } else if (c == 'G') {
-            return 'C';
-        } else {
-            return 'G';
+        switch (c) {
+            case 'A':
+                return 'T';
+            case 'T':
+                return 'A';
+            case 'G':
+                return 'C';
+            default:
+                return 'G';
         }
     }
 }
