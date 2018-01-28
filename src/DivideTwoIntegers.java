@@ -12,6 +12,7 @@ public class DivideTwoIntegers {
             sign = -1;
         }
 
+        // convert long to handle -2147483648 / -1 situation
         long ldividend = Math.abs((long) dividend);
         long ldivisor = Math.abs((long) divisor);
 
