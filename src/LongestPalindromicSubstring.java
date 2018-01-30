@@ -61,21 +61,25 @@ public class LongestPalindromicSubstring {
     }
 
     public String longestPalindromeUsingDp(String s) {
+        String result = null;
         int n = s.length();
 
-        String result = null;
-
+        // dp[leftBound][rightBound] represents
+        // whether substring(leftBound, rightBound+1) is palindrome.
         boolean[][] dp = new boolean[n][n];
 
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j >= 0; j--) {
-                if (s.charAt(i) == s.charAt(j)) {
-                    if ((i - j) <= 2 || dp[i - 1][j + 1]) {
-                        dp[i][j] = true;
+        for (int rightBound = 0; rightBound < n; rightBound++) {
+            for (int leftBound = rightBound; leftBound >= 0; leftBound--) {
+                if (s.charAt(leftBound) == s.charAt(rightBound)) {
+                    // update dp matrix
+                    if (rightBound - leftBound <= 2 ||
+                            dp[leftBound + 1][rightBound - 1]) {
+                        dp[leftBound][rightBound] = true;
 
+                        // update string with max length.
                         if (result == null ||
-                                (i - j + 1 > result.length())) {
-                            result = s.substring(j, i+1);
+                                (rightBound - leftBound + 1 > result.length())) {
+                            result = s.substring(leftBound, rightBound + 1);
                         }
                     }
                 }

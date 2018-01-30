@@ -19,6 +19,29 @@ public class LongestSubstringWithoutRepeatingCharacters {
     }
 
     public int lengthOfLongestSubstring(String s) {
+        int leftBound = 0, rightBound = 0, n = s.length();
+        int[] map = new int[256];
+        int result = 0;
+
+        while (rightBound < n) {
+            char rightCharacter = s.charAt(rightBound);
+
+            if (map[rightCharacter] > 0) {
+                leftBound = Math.max(leftBound, map[rightCharacter]);
+            }
+
+            // update left bound index if rightCharacter appears again;
+            map[rightCharacter] = rightBound + 1;
+
+            result = Math.max(result, rightBound - leftBound + 1);
+
+            rightBound++;
+        }
+
+        return result;
+    }
+
+    public int lengthOfLongestSubstring2(String s) {
         int i = 0, j = 0;
         int n = s.length();
 
