@@ -31,6 +31,8 @@ public class BinaryTreeInorderTraversal {
 
         // Use stack to track nodes.
         Stack<TreeNode> stack = new Stack<>();
+
+        // create a dummy current node.
         TreeNode cur = root;
 
         while (!stack.isEmpty() || cur != null) {
