@@ -24,7 +24,7 @@ public class SearchInRotatedSortedArray {
                     start = mid;
                 }
             } else {
-                if (nums[mid] <= target && target <= nums[end]) {
+                if (nums[mid] < target && target <= nums[end]) {
                     start = mid;
                 } else {
                     end = mid;
