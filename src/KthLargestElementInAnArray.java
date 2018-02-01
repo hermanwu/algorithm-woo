@@ -11,17 +11,23 @@ public class KthLargestElementInAnArray {
     }
 
     public int findKthLargest(int[] nums, int k) {
-        int index = findKthSmallestUsingQuickSelect(nums, 0, nums.length - 1, nums.length - k + 1);
+        int index = findKthSmallestUsingQuickSelect(nums,
+                0,
+                nums.length - 1,
+                nums.length - k + 1);
         return nums[index];
     }
 
-    public int findKthSmallestUsingQuickSelect(int[] nums, int low, int high, int k) {
-
+    public int findKthSmallestUsingQuickSelect(int[] nums,
+                                               int low,
+                                               int high,
+                                               int k) {
         int i = low;
         int j = high - 1;
         int pivot = nums[high];
 
-        // equal sign is used to handle situation when i = j and avoid swap(nums, i, high) when nums[i] < pivot
+        // equal sign is used to handle situation when i = j
+        // and avoid swap(nums, i, high) when nums[i] < pivot
         while (i <= j) {
             if (nums[i] > pivot) {
                 swap(nums, i, j);
@@ -44,7 +50,8 @@ public class KthLargestElementInAnArray {
         } else if (count > k) {
             return findKthSmallestUsingQuickSelect(nums, low, i - 1, k);
         } else {
-            return findKthSmallestUsingQuickSelect(nums, i + 1, high, k - count);
+            return findKthSmallestUsingQuickSelect(nums,
+                    i + 1, high, k - count);
         }
     }
 
