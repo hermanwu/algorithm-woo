@@ -28,7 +28,7 @@ public class MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode dummy = new ListNode(-1);
         ListNode tail = dummy;
-        
+
         PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
 
         for (ListNode l : lists) {
