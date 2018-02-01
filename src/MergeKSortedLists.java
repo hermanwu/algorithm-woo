@@ -26,37 +26,27 @@ public class MergeKSortedLists {
     }
 
     public ListNode mergeKLists(ListNode[] lists) {
+        ListNode dummy = new ListNode(-1);
+        ListNode tail = dummy;
+        
+        PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> a.val - b.val);
 
-        int n = lists.length;
-
-        // Priority Queue does not take size anymore;
-        //PriorityQueue<ListNode> q = new PriorityQueue<>(Comparator.comparingInt(p -> p.val));
-        PriorityQueue<ListNode> q = new PriorityQueue<>((a, b) -> a.val - b.val);
-        /*
-        PriorityQueue<ListNode> q = new PriorityQueue<>(new Comparator<ListNode>() {
-            @Override
-            public int compare(ListNode o1, ListNode o2) {
-                return o1.val - o2.val;
-            }
-        });
-        */
-
-        for (ListNode node : lists) {
-            if (node != null) {
-                q.add(node);
+        for (ListNode l : lists) {
+            if (l != null) {
+                queue.offer(l);
             }
         }
 
-        ListNode dummy = new ListNode(-1);
-        ListNode cur = dummy;
+        while (!queue.isEmpty()) {
+            // poll the node with minimum value.
+            ListNode temp = queue.poll();
+            // add to result list.
+            tail.next = temp;
+            tail = tail.next;
 
-        while (!q.isEmpty()) {
-            ListNode head = q.poll();
-            cur.next = head;
-            cur = cur.next;
-
-            if (head.next != null) {
-                q.add(head.next);
+            // add temp's next node back to queue.
+            if (temp.next != null) {
+                queue.offer(temp.next);
             }
         }
 
