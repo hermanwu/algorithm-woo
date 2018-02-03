@@ -1,0 +1,22 @@
+What does console log display?
+    for (var i = 0; i < 3; i++) {
+        setTimeout(function() {
+            console.log(i);
+        }, 0);
+    }
+    for (let i = 0; i < 3; i++) {
+        setTimeout(function() {
+            console.log(i);
+        }, 0);
+    }
+
+What does console print?
+    var func1 = () => { prop1: '1' + '1' };
+    var obj1 = func1();
+    console.log(obj1);
+
+Create a onclick event using jQuery:
+
+    $('#id').click(() => {
+        alert("test1");
+    });
