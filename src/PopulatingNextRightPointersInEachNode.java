@@ -39,7 +39,7 @@ public class PopulatingNextRightPointersInEachNode {
       TreeLinkNode left, right, next;
       TreeLinkNode(int x) { val = x; }
     }
-    
+
     public void connect(TreeLinkNode root) {
         TreeLinkNode levelStart = root;
 
