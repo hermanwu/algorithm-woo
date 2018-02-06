@@ -14,7 +14,7 @@ import java.util.*;
 
  */
 
-public class PermutationII {
+public class PermutationsII {
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
 
