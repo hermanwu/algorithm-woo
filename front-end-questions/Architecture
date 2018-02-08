@@ -1,0 +1,14 @@
+What patterns do you use to organize your code?
+    a. Module, prototype, observer, singleton
+    b. How can you make JS functions and properties private vs. public?
+
+What are the benefits of services / singleton?
+
+Tell me about a reusable component you've written.
+
+What is functional programming:
+    * building software by composing pure functions
+        * Pure function: given the same inputs, always returns the same output.
+    * declarative rather than imperative
+    * application state flows through pure functions
+    * function composition
