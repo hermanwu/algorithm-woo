@@ -20,7 +20,7 @@ class Car implements MotorVehicle {
 
 
 // Abstract classes: similiar to interfaces, but you can define a behavior for them:
-// 
+//
 
 
 abstract class MotorVehicle {
