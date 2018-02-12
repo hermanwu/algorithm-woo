@@ -1,0 +1,64 @@
+$grammarly-green: #15c39a;
+
+h1 {
+    font-size: large;
+    color: grey;
+}
+
+.giphy-app {
+    display: flex;
+    flex-direction: column;
+    justify-conent: center;
+    align-items: center;
+}
+
+.text-input {
+    width: 300px;
+    height: 30px;
+    border: 2px solid $grammarly-green;
+    border-radius: 2px;
+    outline: none;
+    font-size: 20px;
+    color: grey;
+    letter-spacing: 1px;
+    text-indent: 10px;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    background-color: $grammarly-green;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 0 6px green;
+
+    &:hover {
+        box-shadow: 0 4px green;
+        /* also need to move the top of the button
+           this is a relative position
+           */
+        top: 2px;
+    }
+
+    &:active {
+        box-shadow: none;
+        top: 6px;
+    }
+
+    &:disabled {
+        box-shadow: none;
+        background-color: grey;
+        cursor: not-allowed;
+        box-shadow: 0 6px darkgrey;
+        top: 2px;
+    }
+}
