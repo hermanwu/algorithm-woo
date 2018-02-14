@@ -18,21 +18,19 @@ public class CoinChange {
         System.out.println(cc.coinChange(input1, sum));
     }
 
-    public int coinChange(int[] typeOfCoins, int sum) {
-        int[] result = new int[sum + 1];
+    public int coinChange(int[] coins, int amount) {
+        int[] results = new int[amount + 1];
 
-        int i, j;
+        for (int i = 1; i <= amount; i++) {
+            results[i] = Integer.MAX_VALUE;
 
-        for (i = 1; i <= sum; i++) {
-            result[i] = Integer.MAX_VALUE;
-
-            for (j = 0; j < typeOfCoins.length; j++) {
-                if (typeOfCoins[j] <= i && result[i - typeOfCoins[j]] != Integer.MAX_VALUE) {
-                    result[i] = Math.min(result[i], result[i - typeOfCoins[j]] + 1);
+            for (int coin : coins) {
+                if (coin <= i && results[i - coin] != Integer.MAX_VALUE) {
+                    results[i] = Math.min(results[i], results[i - coin] + 1);
                 }
             }
         }
 
-        return result[sum] == Integer.MAX_VALUE ? -1 : result[sum];
+        return results[amount] == Integer.MAX_VALUE ? -1 : results[amount];
     }
 }

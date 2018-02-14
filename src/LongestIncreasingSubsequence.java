@@ -14,7 +14,7 @@
 public class LongestIncreasingSubsequence {
     public int lengthOfLIS(int[] nums) {
         int[] tails = new int[nums.length];
-        
+
         int size = 0;
 
         for (int num : nums) {
