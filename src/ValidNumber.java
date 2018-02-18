@@ -1,6 +1,6 @@
 /**
 Twitter:
-Github:
+Github (all solutions) : https://github.com/hermanwu/codeWoo/tree/master/src
 
  Validate if a given string is numeric.
 
