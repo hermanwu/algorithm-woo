@@ -35,11 +35,11 @@ public class InvertBinaryTree {
     }
 
     public TreeNode invertTreeIterative(TreeNode root) {
-        // edge check
+        // check edge case
         if (root == null) { return null; }
 
-        // add root node to queue
-        // this will be level order traversal
+        // use a Queue for BFS search
+        //(similiar to level order traversal)
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
 
