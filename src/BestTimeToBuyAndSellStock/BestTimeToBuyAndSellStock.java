@@ -9,4 +9,5 @@ package BestTimeToBuyAndSellStock;
  */
 
 public class BestTimeToBuyAndSellStock {
+    
 }
