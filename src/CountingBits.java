@@ -1,13 +1,12 @@
 /*
  Given a non negative integer number num.
  for each num, calculate the number of 1's in their binary representation and return them as an array.
-
  */
 
 
 import java.util.Arrays;
 
-public class CountingBits {
+public class  CountingBits {
     public static void main(String[] args) {
         CountingBits cb = new CountingBits();
 

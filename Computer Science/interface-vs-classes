@@ -37,6 +37,5 @@ abstract class MotorVehicle {
 class Car extends MotorVehicle {
     void run() {
         print("Wrroooomm");
-
     }
 }

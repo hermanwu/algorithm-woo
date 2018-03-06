@@ -1,9 +1,2 @@
 1. Walk me through determing if a given string has duplicate characters.
 2. Tell me about an error you can across in your code and how you went about fixing it.
-3. Implement a shopping cart that holds a lit of items
-    a. What  actions can the cart perform?
-    b. Where is the cart data stored?
-    c. Is cart data persisted across pages? across browser sessions?
-    d. how is the cart accessed across the app?
-4. How can I check if a given string is a palindrome?
-    a. palindrome is a word, phrase, number or other sequence of units that has the property of reading the same in either direction

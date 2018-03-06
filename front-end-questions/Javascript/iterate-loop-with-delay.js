@@ -4,6 +4,18 @@
 
  */
 
+// Question One
+(() => {
+    const arr = [10, 12, 15, 21];
+    for (var i = 0; i < arr.length; i++) {
+        setTimeout(function() {
+            console.log('Index: ' + i + ', element: ' + arr[i])
+        }, 3000)
+    }
+}) ();
+
+
+// Question two
 (() => {
     const arr = [10, 12, 15, 21];
     for (var i = 0; i < arr.length; i++) {
@@ -17,7 +29,7 @@
     }
 }) ();
 
-
+// Question three
 (() => {
     const arr = [10, 12, 15, 21];
     for (let i = 0; i < arr.length; i++) {

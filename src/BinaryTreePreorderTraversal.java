@@ -52,11 +52,11 @@ public class BinaryTreePreorderTraversal {
 
             result.add(cur.val);
             // Since this is a stack, we need to push right node first, so it will pop after the left node.
-            if (cur.left != null) {
+            if (cur.right != null) {
                 q.push(cur.right);
             }
 
-            if (cur.right != null) {
+            if (cur.left != null) {
                 q.push(cur.left);
             }
         }

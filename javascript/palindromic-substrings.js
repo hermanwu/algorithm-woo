@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {number}
  */
+
 let countSubstrings = function(s) {
     let ans = 0;
     let extendSearch = (s, left, right) => {

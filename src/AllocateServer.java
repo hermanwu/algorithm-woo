@@ -1,16 +1,20 @@
 import java.util.*;
 
 /**
- * 1. Write a function(int[]) -> int that returns the lowest unassigned integer. For example [] -> 1 (empty set), [1] -> 2, [5, 3, 1] -> 2.
+ * 1. Write a function(int[]) -> int that returns the lowest unassigned integer.
+ * For example [] -> 1 (empty set), [1] -> 2, [5, 3, 1] -> 2.
 
         Either sort the array, iterate, and compare current and previous. If there is a gap then that's your number;
         Or use hashmap to insert all existing numbers, then check the first missing number.
 
 
-        2. Extend (1), write functions:
-
-        * string allocate(string serverName): return a string which is the given server name + the lowest unassigned integer for this name. Ex: allocate("wash"), return something like wash3.
-        * deallocate(string allocatedServerName): eg., given wash3, need to return 3 to the unassigned number set for "wash".
+ 2. Extend (1), write functions:
+ * string allocate(string serverName):
+ * return a string which is the given server name + the lowest unassigned integer for this name.
+ * Ex: allocate("wash"), return something like wash3.
+ *
+ * deallocate(string allocatedServerName):
+ * eg., given wash3, need to return 3 to the unassigned number set for "wash".
 
  given a list
 

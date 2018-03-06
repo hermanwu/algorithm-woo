@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-
 public class BinaryTreePostorderTraversal {
 
     public static void main(String[] args) {
@@ -28,12 +27,14 @@ public class BinaryTreePostorderTraversal {
 
                 // check right treenode.
                 TreeNode temp = stack.peek().right;
+
                 if (temp == null) {
                     // handle last single nodes.
                     temp = stack.pop();
                     result.add(temp.val);
 
-                    while (!stack.isEmpty() && stack.peek().right == temp) {
+                    while (!stack.isEmpty() &&
+                            stack.peek().right == temp) {
                         temp = stack.pop();
                         result.add(temp.val);
                     }
@@ -45,6 +46,7 @@ public class BinaryTreePostorderTraversal {
                 }
             }
         }
+
         return result;
     }
 }

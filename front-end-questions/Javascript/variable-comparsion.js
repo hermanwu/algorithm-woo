@@ -25,9 +25,9 @@ function scoppedVariables() {
 
 scoppedVariables();
 
-print('example for undeclared variable');
-print(undeclaredVariable); // print out 2
-print(declaredVariable);  // print out 1
+console.log('example for undeclared variable');
+console.log(undeclaredVariable); // console.log out 2
+console.log(declaredVariable);  // console.log out 1
 
 
 
@@ -35,14 +35,14 @@ print(declaredVariable);  // print out 1
 
 var undefinedVariable;
 
-print('example for undefined variable');
-print(undefinedVariable); // undefined;
-print(typeof undefinedVariable); // undefined;
+console.log('example for undefined variable');
+console.log(undefinedVariable); // undefined;
+console.log(typeof undefinedVariable); // undefined;
 
 
 // null: a variable that is defined to have a null value;
 var nullVariable = null; //null;
 
-print('example for null variable');
-print(nullVariable);
-print(typeof nullVariable); // object;
+console.log('example for null variable');
+console.log(nullVariable);
+console.log(typeof nullVariable); // object;

@@ -11,4 +11,10 @@ What is functional programming:
         * Pure function: given the same inputs, always returns the same output.
     * declarative rather than imperative
     * application state flows through pure functions
-    * function composition
+    * function composition\
+
+Implement a shopping cart that holds a lit of items
+    a. What  actions can the cart perform?
+    b. Where is the cart data stored?
+    c. Is cart data persisted across pages? across browser sessions?
+    d. how is the cart accessed across the app?

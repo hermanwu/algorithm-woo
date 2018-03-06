@@ -1,5 +1,3 @@
-package BinaryTreeLevelOrderTraversal;
-
 import java.util.*;
 import util.TreeNode;
 

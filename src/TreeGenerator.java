@@ -17,11 +17,9 @@ public class TreeGenerator {
         return generateTreeWithArray(new int[]{1, 4, -1, 3, 5});
     }
 
-
     public static TreeNode generateTreeRightHeavy() {
         return generateTreeWithArray(new int[]{1, -1, 7, -1, -1, 6, 8});
     }
-
 
     public static TreeNode generateTreeWithArray(int[] arr) {
         if (arr == null || arr.length == 0) {

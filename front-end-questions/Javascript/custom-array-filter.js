@@ -23,6 +23,7 @@ let data = [
 let myFilter = { checked: true };
 
 let filterArray = $filter('filter')(data, myFilter);
+
 console.log(filterArray);
 
 

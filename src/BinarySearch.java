@@ -20,8 +20,7 @@ public class BinarySearch {
             return -1;
         }
 
-        int start = 0,
-                end = arr.length - 1;
+        int start = 0, end = arr.length - 1;
 
         while ( start < end ) {
             int mid = ( start + end ) / 2;
@@ -75,7 +74,5 @@ public class BinarySearch {
         }
 
         return -1;
-
-
     }
 }

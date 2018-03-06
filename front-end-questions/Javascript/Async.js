@@ -1,8 +1,4 @@
-// What order does f receive its arguments?
 
-f("foo");
-setTimeout(function() { f("bar");}, 0);
-f("barz");
 
 // callback
 
