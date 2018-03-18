@@ -70,5 +70,4 @@ public class MinimumWindowSubstring {
         return result == Integer.MAX_VALUE ? "" :
                 s.substring(resultStartIndex, resultStartIndex + result);
     }
-
 }
