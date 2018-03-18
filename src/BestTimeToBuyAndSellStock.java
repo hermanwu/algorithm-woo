@@ -1,5 +1,3 @@
-package BestTimeToBuyAndSellStock;
-
 /**
 
  Say you have an array for which the ith element is the price of a given stock on day i.
@@ -33,5 +31,18 @@ public class BestTimeToBuyAndSellStock {
                     price - min > 0 ? price - min : 0);
         }
         return result;
+    }
+
+    public int maxProfitWithKadaneAlgorithm(int[] prices) {
+        int max = 0;
+        int curmax = 0;
+
+        for (int i = 1; i < prices.length; i++) {
+            curmax = Math.max(0, curmax + prices[i] - prices[i - 1]);
+
+            max = Math.max(max, curmax);
+        }
+
+        return max;
     }
 }
