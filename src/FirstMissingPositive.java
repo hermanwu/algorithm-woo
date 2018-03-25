@@ -1,6 +1,6 @@
 /**
 
- iven an unsorted integer array, find the first missing positive integer.
+ Given an unsorted integer array, find the first missing positive integer.
 
  For example,
  Given [1,2,0] return 3,
