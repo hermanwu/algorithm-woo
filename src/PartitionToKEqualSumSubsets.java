@@ -25,7 +25,7 @@ public class PartitionToKEqualSumSubsets {
         Printer.printResultComparsion(p.canPartitionKSubsets(input, 4), true);
     }
 
-    public boolean canPartitionKSubsets(int[] nums, int k) {
+    public boolean canPartitionKSubsets2(int[] nums, int k) {
         int sum = 0;
         int i, n = nums.length;
         for (i = 0; i < n; i++) {
@@ -72,6 +72,45 @@ public class PartitionToKEqualSumSubsets {
             // if the selected value will not fit in any set;
             if (groups[i] == 0) break;
         }
+        return false;
+    }
+
+    public boolean canPartitionKSubsets(int[] nums, int k) {
+        int sum = 0;
+
+        for (int num : nums) {
+            sum += num;
+        }
+        if (sum % k != 0) {
+            return false;
+        }
+
+        boolean[] visited = new boolean[nums.length];
+
+        return helper(nums, visited, k, 0, 0, 0, sum / k);
+    }
+
+    private boolean helper(int[] nums, boolean[] visited,
+                           int k, int sum, int start,
+                           int curUsedNum, int target) {
+        if (k == 1) return true;
+
+        if (sum == target && curUsedNum > 0) {
+            return helper(nums, visited, k - 1, 0, 0, 0, target);
+        }
+
+        for (int i = start; i < nums.length; i++) {
+            if (!visited[i]) {
+                visited[i] = true;
+
+                if (helper(nums, visited, k, sum + nums[i], i, curUsedNum++, target)) {
+                    return true;
+                }
+
+                visited[i] = false;
+            }
+        }
+
         return false;
     }
 }
