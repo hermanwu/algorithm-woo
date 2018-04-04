@@ -27,6 +27,7 @@
 
  ----- section 3.4.6 in Artificial Intelligence - A modern approach by Stuart Russel and Peter Norvig
  */
+
 public class _WordLadder {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         Set<String> beginSet = new HashSet<String>(), endSet = new HashSet<String>();
