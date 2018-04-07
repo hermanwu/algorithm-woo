@@ -18,8 +18,51 @@ import java.util.HashMap;
 
  */
 
-public class MinimumWindowSubstring {
-    public String minWindow(String s, String target) {
+public class _MinimumWindowSubstring {
+    public String minWindow(String s, String t) {
+        int[] cnt = new int[128];
+
+        // count all t's appearence.
+        // when total is zero, it means it is valid substring
+        for (char c : t.toCharArray()) {
+            cnt[c]++;
+        }
+
+        int from = 0;
+        int total = t.length();
+        int min = Integer.MAX_VALUE;
+
+        for (int right = 0, left = 0; right < s.length(); right++) {
+            // ====== handle right pointer
+            if (cnt[s.charAt(right)] > 0) {
+                // when we find a target character, we decrease total.
+                total--;
+            }
+            cnt[s.charAt(right)]--;
+
+
+            // ====== start to deal with left pointer
+            // If total is still zero, we keep move left pointer.
+            while (total == 0) {
+                // find a new minimum
+                if (right - left  +  1 < min) {
+                    min = right - left + 1;
+                    from = left;
+                }
+
+                cnt[s.charAt(left)]++;
+                if (cnt[s.charAt(left)] > 0) {
+                    total++;
+                }
+                left++;
+            }
+
+        }
+
+        return (min == Integer.MAX_VALUE) ? "" : s.substring(from, from + min);
+    }
+
+    public String minWindow2(String s, String target) {
         HashMap<Character, Integer> targetCharMap = new HashMap();
 
         // ceate hashmap with all possible value;
