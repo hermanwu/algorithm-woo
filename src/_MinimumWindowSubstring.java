@@ -19,7 +19,46 @@ import java.util.HashMap;
  */
 
 public class _MinimumWindowSubstring {
-    public String minWindow(String s, String t) {
+    public String minWindow(String source , String target) {
+        // write your code here
+
+        int left = 0;
+        int right = 0;
+        int min = Integer.MAX_VALUE;
+        int[] map = new int[256];
+        int startIndex = 0;
+        int total = 0;
+
+        for (int i = 0; i < target.length(); i++) {
+            map[target.charAt(i)]++;
+            total++;
+        }
+
+        for (left = 0; left < source.length(); left++) {
+            while (right < source.length() && total > 0) {
+                if (map[source.charAt(right)] > 0) {
+                    total--;
+                }
+                map[source.charAt(right)]--;
+                right++;
+            }
+            if (total == 0 && (right - left) < min) {
+                startIndex = left;
+                min = right - left;
+            }
+
+            if (map[source.charAt(left)] >= 0) {
+                total++;
+            }
+            map[source.charAt(left)]++;
+        }
+
+        return min == Integer.MAX_VALUE ? "" :
+                source.substring(startIndex, startIndex + min);
+    }
+
+
+    public String minWindow3(String s, String t) {
         int[] cnt = new int[128];
 
         // count all t's appearence.
