@@ -51,7 +51,7 @@ var searchRange = function(nums, target) {
     if (nums[end] == target) {
         result[1] = end;
     } else {
-        result[1]= start;
+        result[1] = start;
     }
 
     return result;
