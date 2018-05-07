@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  Given a non-empty array containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
 
@@ -61,7 +63,7 @@ public class PartitionEqualSubsetSum {
     }
 
 
-    public boolean canPartition(int[] nums) {
+    public boolean canPartition2(int[] nums) {
         int sum = 0;
         for (int i : nums) {
             sum += i;

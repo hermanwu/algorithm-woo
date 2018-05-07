@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
 
  Design a max stack that supports push, pop, top, peekMax and popMax.

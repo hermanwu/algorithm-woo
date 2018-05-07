@@ -1,5 +1,4 @@
 import java.util.*;
-import util.TreeNode;
 
 /**
 Input: A TreeNode called root

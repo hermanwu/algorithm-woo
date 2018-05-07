@@ -17,7 +17,7 @@
 public class BasicCalculatorIII {
     public int basicCalculatorIII(String s) {
 
-
+        return 0;
 
     }
 }

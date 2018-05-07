@@ -26,6 +26,6 @@ Return 5( First person spends 5 minutes to copy book 1 and book 2 and second per
 public class CopyBooks {
 
     public int copyBooks(int[] pages, int k) {
-
+        return 0;
     }
 }

@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
  Given four lists A, B, C, D of integer values, compute how many tuples (i, j, k, l) there are such that A[i] + B[j] + C[k] + D[l] is zero.
 
@@ -24,6 +26,7 @@ public class FourSumTwo {
     HashMap<Integer, Integer> map = new HashMap<>();
     int result = 0;
 
+    /*(
         for (int i : A) {
         for (int j : B) {
             int sum = i + j;
@@ -40,4 +43,5 @@ public class FourSumTwo {
         }
     }
         return result;
+        */
 }
