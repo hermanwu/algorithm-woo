@@ -31,10 +31,11 @@ public class KSum {
             for (int j = 1; j <= k && j <= i; j++) {
                 // sum is t
                 for (int t = 1; t <= target; i++) {
+                    f[i][j][t] += f[i - 1][j][t];
+
                     if (A[i - 1] <= t) {
                         f[i][j][t] += f[i - 1][j - 1][t - A[i - 1]];
                     }
-                    f[i][j][t] += f[i - 1][j][t];
                 }
             }
 
