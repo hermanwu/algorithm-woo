@@ -15,6 +15,11 @@
  */
 public class HouseRobber {
     public long houseRobber(int[] A) {
+        long old, now, t;
+        int i;
+    }
+
+    public long houseRobber(int[] A) {
         if (A.length == 0) {
             return 0;
         }
