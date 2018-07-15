@@ -1,24 +1,48 @@
+// Lintcode
+// 12. Min Stack
+// Implement a stack with min() function, which will return the smallest number in the stack.
+
+// It should support push, pop and min operation all in O(1) cost.
+
+// Example
+// push(1)
+// pop()   // return 1
+// push(2)
+// push(3)
+// min()   // return 2
+// push(1)
+// min()   // return 1
+
 import java.util.Stack;
 
-/**
- * Created by hermanwu on 3/29/18.
- */
 public class MinStack {
-    Stack<Integer> stack=new Stack<>();
-    int min=Integer.MAX_VALUE;
-    public void push(int x) {
-        if(x<=min) {stack.push(min); min=x;}
-        stack.push(x);
+    private Stack<Integer> stack;
+    private Stack<Integer> minStack;
+    public MinStack() {
+        // do initialize if necessary
+        stack = new Stack<Integer>();
+        minStack = new Stack<Integer>();
     }
-    public void pop() {
-        if(stack.peek()==min){ stack.pop(); min=stack.pop(); }
-        else stack.pop();
+
+    public void push(int number) {
+        // write your code here
+        stack.push(number);
+        if(minStack.size() == 0 || minStack.peek() >= number) {
+            minStack.push(number);
+        }
     }
-    public int top() {
-        return stack.peek();
+
+    public int pop() {
+        // write your code here
+        if(minStack.peek().equals(stack.peek())) {
+            minStack.pop();
+        }
+        return stack.pop();
+        
     }
-    public int getMin() {
-        return min;
+
+    public int min() {
+        // write your code here
+        return minStack.peek();
     }
 }
-
