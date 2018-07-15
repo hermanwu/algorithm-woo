@@ -12,17 +12,17 @@
  Your function should return length = 2, with the first two elements of nums being 2.
  */
 
-var removeElement = function(nums, val) {
-    let i = 0;
+var removeElement = function (nums, val) {
+  let i = 0;
 
-    for (let n of nums) {
+  for (let n of nums) {
 
-        if (n != val) {
-            nums[i] = n;
-            i++;
-        }
-
+    if (n != val) {
+      nums[i] = n;
+      i++;
     }
 
-    return i;
+  }
+
+  return i;
 };
