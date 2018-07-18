@@ -18,8 +18,10 @@ class Solution:
 
     def cloneGraph(self, node):
         # write your code here
+        # if node is null
         if node == None:
             return None
+        # if node is in the dict
         if node.label in self.dict:
             return self.dict[node.label]
         root = UndirectedGraphNode(node.label)
