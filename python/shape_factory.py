@@ -2,12 +2,14 @@ class Shape:
     def draw(self):
         raise NotImplementedError('This method should have implemented.')
 
+
 class Triangle(Shape):
     # Write your code here
     def draw(self):
         print "  /\\"
         print " /  \\"
         print "/____\\"
+
 
 class Rectangle(Shape):
     # Write your code here
@@ -16,6 +18,7 @@ class Rectangle(Shape):
         print "|    |"
         print " ----"
 
+
 class Square(Shape):
     # Write your code here
     def draw(self):
@@ -23,6 +26,7 @@ class Square(Shape):
         print "|    |"
         print "|    |"
         print " ----"
+
 
 class ShapeFactory:
     def getShape(self, shapeType):
