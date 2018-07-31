@@ -17,9 +17,28 @@ class Solution(object):
         :type nums: List[int]
         :rtype: void Do not return anything, modify nums in-place instead.
         """
+        # zero is the j index
         zero = 0;
 
         for i in range(len(nums)):
             if nums[i] != 0:
                 nums[zero], nums[i] = nums[i], nums[zero]
                 zero += 1
+
+
+    def moveZeroes2(self, nums):
+        # write your code here
+        if nums is None or len(nums) <= 1:
+            return
+
+        left, right = 0, 0
+
+        while right <= len(nums) - 1:
+            if nums[right] != 0:
+                nums[left] = nums[right]
+                left += 1
+            right += 1
+
+        while left <= len(nums) - 1:
+            nums[left] = 0
+            left += 1
