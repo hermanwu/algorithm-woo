@@ -1,6 +1,8 @@
 '''
 Description
-Given a target number, a non-negative integer k and an integer array A sorted in ascending order, find the k closest numbers to target in A, sorted in ascending order by the difference between the number and target. Otherwise, sorted in ascending order by number if the difference is same.
+Given a target number, a non-negative integer k and an integer array A sorted in ascending order,
+find the k closest numbers to target in A, sorted in ascending order by the difference between the number and target.
+Otherwise, sorted in ascending order by number if the difference is same.
 
 The value k is a non-negative integer and will always be smaller than the length of the sorted array.
 Length of the given array is positive and will not exceed 10^4
