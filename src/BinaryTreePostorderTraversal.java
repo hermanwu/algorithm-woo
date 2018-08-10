@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class BinaryTreePostorderTraversal {
+public class aBinaryTreePostorderTraversal {
 
     public static void main(String[] args) {
         TreeNode treeNode = TreeGenerator.generateTreeBalanced();

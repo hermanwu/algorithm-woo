@@ -1,35 +1,36 @@
 # https://www.lintcode.com/problem/kth-smallest-element-in-a-bst
 
 class Solution:
-    """
-    @param root: the given BST
-    @param k: the given k
-    @return: the kth smallest element in BST
-    """
-    def kthSmallest(self, root, k):
+  """
+  @param root: the given BST
+  @param k: the given k
+  @return: the kth smallest element in BST
+  """
 
-        self.treelist = []
-        self.inOrder(root)
+  def kthSmallest(self, root, k):
 
-        if k <= 0:
-            return None
-        # return
-        return self.treelist[k-1]
+    self.treelist = []
+    self.inOrder(root)
 
-    # Method to do in order traversal
-    def inOrder(self, root):
+    if k <= 0:
+      return None
+    # return
+    return self.treelist[k - 1]
 
-        if root is None:
-            return root
+  # Method to do in order traversal
+  def inOrder(self, root):
 
-        cur = root
-        stack = []
+    if root is None:
+      return root
 
-        while cur is not None or stack:
-            while cur is not None:
-                stack.append(cur)
-                cur = cur.left
+    cur = root
+    stack = []
 
-            cur = stack.pop()
-            self.treelist.append(cur.val)
-            cur = cur.right
+    while cur is not None or stack:
+      while cur is not None:
+        stack.append(cur)
+        cur = cur.left
+
+      cur = stack.pop()
+      self.treelist.append(cur.val)
+      cur = cur.right
