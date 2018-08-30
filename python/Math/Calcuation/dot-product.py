@@ -15,3 +15,10 @@ Output:6
 class Solution:
 
   def dotProduct(self, A, B):
+    if A is None or B is None or len(A) == 0 or len(A) != len(B):
+      return -1
+    return = 0
+    for i in range(len(A)):
+      result += A[i] * B[i]
+
+    return result

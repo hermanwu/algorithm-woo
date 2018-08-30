@@ -13,3 +13,31 @@
 返回:  "01:23"
 '''
 
+def nextTime(self, time):
+  if len(time) != 5:
+    return "-1"
+
+  hour = int(time[:2])
+  minute = int(time[3:])
+
+  if hour > 23 or minute > 59:
+    return "-1"
+
+  while True:
+    minute += 1
+    if minute == 60:
+      minute = 0
+      hour += 1
+
+    if hour == 24:
+      hour = 0
+
+    a = hour // 10
+    b = hour % 10
+    c = minute // 10
+    d = minute % 10
+
+    if a != b and a != c and a != d and b != c and b != d and c != d:
+      return str(a) + str(b) + ":" + str(c) + str(d)
+
+  return ""
