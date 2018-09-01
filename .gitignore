@@ -8,3 +8,4 @@ codeWoo.iml
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
 venv
+.vscode/

@@ -18,4 +18,5 @@ Return
 Notice
 All words have the same length.
 All words contain only lowercase alphabetic characters.
+
 '''
