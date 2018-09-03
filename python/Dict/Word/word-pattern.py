@@ -27,10 +27,10 @@ def wordPattern(self, pattern, testStr):
     return False
 
   for i in range(len(pattern)):
-    if patter[i] not in dict:
+    if pattern[i] not in dict:
       dict[pattern(i)] = word[i]
     else:
-      if dict[patter[i]] != word[i]:
-        return false
+      if dict[pattern[i]] != word[i]:
+        return False
 
   return True
