@@ -19,3 +19,46 @@ return its length 5.
 
 '''
 
+def ladderLength(self, start, end, dict):
+  if len(start) != len(end):
+    return -1
+
+  if start == end:
+    return 1
+
+  n = len(start)
+
+  letters = "".join([chr(x) for x in range(ord("a"), ord("z") + 1)])
+
+  startSet = {start}
+  endSet = {end}
+
+  dict.discard(start)
+  dict.discard(end)
+
+  ladderLength = 2
+
+  while startSet:
+    if len(endSet) < len(startSet):
+      startSet, endSet = endSet, startSet
+
+    nextSet = set()
+
+    for word in startSet:
+      for i in range(n):
+        for letter in letters:
+          nextWord = word[:i] + letter + word[i + 1:]
+
+          if nextWord in endSet:
+            return ladderLength
+
+          if nextWord not in dict:
+            continue
+
+          nextSet.add(nextWord)
+          dict.remove(nextWord)
+
+    startSet = nextSet
+    ladderLength += 1
+
+  return -1

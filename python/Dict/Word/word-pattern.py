@@ -18,3 +18,19 @@ You may assume pattern contains only lowercase letters, and str contains lowerca
 
 '''
 
+def wordPattern(self, pattern, testStr):
+
+  word = testStr.split()
+  dict = {}
+
+  if len(set(pattern) != len(set(word))):
+    return False
+
+  for i in range(len(pattern)):
+    if patter[i] not in dict:
+      dict[pattern(i)] = word[i]
+    else:
+      if dict[patter[i]] != word[i]:
+        return false
+
+  return True
