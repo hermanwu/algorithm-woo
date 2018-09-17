@@ -1,6 +1,7 @@
 '''
 458. Last Position of Target
-Find the last position of a target number in a sorted array. Return -1 if target does not exist.
+Find the last position of a target number in a sorted array.
+Return -1 if target does not exist.
 
 Example
 Given [1, 2, 2, 4, 5, 5].
@@ -21,11 +22,10 @@ class Solution:
     """
     def lastPosition(self, nums, target):
         # write your code here
-        # write your code here
         if len(nums) == 0 or nums is None:
             return -1
-        start, end = 0, len(nums) - 1
 
+        start, end = 0, len(nums) - 1
         if target < nums[start] or target > nums[end]:
             return -1
 
