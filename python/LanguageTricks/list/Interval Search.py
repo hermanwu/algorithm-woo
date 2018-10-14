@@ -12,4 +12,16 @@ Return: True
 
 '''
 
-def isInterval(self, intervalList, number):
+class Solution:
+    """
+    @param intervalList: 
+    @param number: 
+    @return: return True or False
+    """
+    def isInterval(self, intervalList, number):
+        # Write your code here
+        for list in intervalList:
+            if number >= list[0] and number <= list[1]:
+                return 'True'
+            
+        return 'False'
