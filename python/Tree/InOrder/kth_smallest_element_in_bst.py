@@ -7,31 +7,23 @@ class Solution:
     @return: the kth smallest element in BST
     """
     def kthSmallest(self, root, k):
+        # write your code here
+        arr = self.inorder(root)
 
-        treelist = self.inOrder(root)
+        return arr[k - 1]
 
-        if k <= 0:
-            return None
-        # return
-        return self.treelist[k-1]
-
-    # Method to do in order traversal
-    def inOrder(self, root):
+        
+    def inorder(self, root):
         result = []
         stack = []
-
-        if root is None:
-            return result
-
-        # always setup cur
-        cur = root
-        while cur is not None or stack:
-            while cur is not None:
-                stack.append(cur)
-                cur = cur.left
-
-            cur = stack.pop()
-            result.append(cur.val)
-            cur = cur.right
-
+        
+        tmp = root
+        while tmp or stack:
+            while tmp:
+                stack.append(tmp)
+                tmp = tmp.left
+                
+            tmp = stack.pop()
+            result.append(tmp.val)
+            tmp = tmp.right
         return result
