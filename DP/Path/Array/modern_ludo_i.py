@@ -17,23 +17,24 @@ output:
 
 
 def modernLudo(self, length, connections):
-  dp = [0] * (length + 1)
-
-  jump = {}
-
-
-  for s, e in connections:
-    jump[s] = e
-
-  for i in range(length - 1, 0, -1):
-    dp[i] = float('inf')
-    if i in jump:
-      dp[i] = dp[jump[i]]
-
-    for j in range(i, min(length + 1, i + 7)):
-      dp[i] = min(dp[i], 1 + dp[j])
-
-      if j in jump:
-        dp[i] = min(dp[i], 1 + dp[jump[j]])
-
-  return dp[1]
+  if length <= 7:
+      return 1 
+  
+  map = {}
+  for a, b in connections:
+      map[a] = b
+  
+  dp = {}
+  for i in range(length+1):
+      dp[i] = sys.maxsize
+  
+  for pos in range(length+1):
+      if pos <= 7:
+          dp[pos] = 1
+      else:
+          for i in range(1, 7):
+              dp[pos] = min(dp[pos], dp[pos - i] + 1)
+      if pos in map:
+          dp[map[pos]] = min(dp[map[pos]], dp[pos])
+      
+  return dp[length]
