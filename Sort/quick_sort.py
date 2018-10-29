@@ -14,7 +14,7 @@ class Solution:
         left, right = start, end
 
         # not < but <=; example: [3,2,1,4,5]
-        while left <=right:
+        while left <= right:
             while left <= right and arr[left] < pivot:
                 left += 1
 
