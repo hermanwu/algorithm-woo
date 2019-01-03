@@ -13,3 +13,4 @@ true
 
 def canConvert(self, s, t):
   return t in s
+
