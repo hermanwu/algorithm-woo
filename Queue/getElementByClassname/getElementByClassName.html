@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="haha">Test</div>
+    <script>
+      let getElementByClassName = className => {
+        const nodes = [];
+
+        let crawl = node => {
+          if (!node) {
+            return;
+          }
+
+          if (node.classList && node.classList.contains(className) > -1) {
+            nodes.push(node);
+          }
+
+          node.childNodes.forEach(child => {
+            return crawl(child);
+          });
+        };
+
+        crawl(document.body);
+        return nodes;
+      };
+
+      console.log(getElementByClassName("haha")[0].textContent);
+    </script>
+  </body>
+</html>
