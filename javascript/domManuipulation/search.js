@@ -3,4 +3,12 @@ const findNodeById = (id) => {
   return document.getElementById(id);
 }
 
-// find 
+// find node by class
+const findElementsByClass = (className) => {
+  return document.getElementsByClassName(className.slice(1));
+}
+
+const newDiv = document.createElement('div');
+newDiv.innerHTML = '<div class="test"></div>';
+
+console.log(newDiv.findElementsByClass('.test'));
