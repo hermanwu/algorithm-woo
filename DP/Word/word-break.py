@@ -20,16 +20,13 @@ def word_break(self, s, dict):
     return len(s) == 0
 
   n = len(s)
-  f = [False] * (n + 1)
-  f[0] = True
+  dp = [False] * (n + 1)
+  dp[0] = True
 
-  maxLengh = max([len(w) for w in dict])
   for i in range(1, n + 1):
-    for j in range(1, min(i, maxLength) + 1):
-      if not f[i - j]:
-        continue
-      if s[i - j : i] in dict:
-        f[i] = True
+    for j in range(i):
+      if dp[j] and dp[j : i] in dict:
+        dp[i] = True
         break
 
-  return f[n]
+  return dp[n]
