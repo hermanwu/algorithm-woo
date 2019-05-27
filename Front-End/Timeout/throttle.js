@@ -1,5 +1,6 @@
-const throttle = (fn, delay) {
-  let isThrottled = false, context;
+const throttle = (fn, delay) => {
+  let isThrottled = false,
+    context;
 
   return function(...args) {
     if (isThrottled) {
@@ -11,6 +12,6 @@ const throttle = (fn, delay) {
 
     setTimeout(() => {
       isThrottled = false;
-    }, wait)
-  }
-}
+    }, wait);
+  };
+};

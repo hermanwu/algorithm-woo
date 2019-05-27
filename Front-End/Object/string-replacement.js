@@ -1,4 +1,4 @@
-// create a class that will format
+// create a class that will format a string with object properties
 
 class Person {
   constructor(name) {

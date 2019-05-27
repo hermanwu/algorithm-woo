@@ -23,7 +23,7 @@ const findElementsByClass = className => {
   return document.getElementsByClassName(className.slice(1));
 };
 
-const newDiv = document.createElement("div");
+const newDiv = window.document.createElement("div");
 newDiv.innerHTML = '<div class="test"></div>';
 
-console.log(newDiv.findElementsByClass(".test"));
+console.log("search.js: " + findElementsByClass(".test"));
