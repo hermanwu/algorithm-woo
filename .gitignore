@@ -9,3 +9,4 @@ codeWoo.iml
 .idea/jsLibraryMappings.xml
 venv
 .vscode/
+.dist/
