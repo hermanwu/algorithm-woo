@@ -20,6 +20,19 @@ const throttle = (fn, delay) => {
   };
 };
 
+// https://bitbucket.corp.cloudistics.com/projects/CLDTX/repos/cloudistics/pull-requests/10025/commits/8ad13dba6b67fa8d22f07edd748b7138380bc8d0#mwc/src/main/webapp/src/app/shared/services/utility.service.ts
+  throttle = (inputFunction, limit) => {
+    let inThrottle;
+    return function() {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        inputFunction.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
+      }
+    };
+  };
 
 // const throttle = (func, limit) => {
 //   let inThrottle
