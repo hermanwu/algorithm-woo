@@ -7,13 +7,11 @@ codeWoo.iml
 .idea
 
 venv
-<<<<<<< HEAD
-.vscode/
 .dist/
-=======
 
 .vscode/
 
 node_modules
 dist
->>>>>>> 3ddfc927cc0ff325014f80c95788507304ce232e
+
+dev.js
