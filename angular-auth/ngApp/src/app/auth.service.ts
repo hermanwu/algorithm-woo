@@ -8,11 +8,18 @@ import { Router } from '@angular/router';
 export class AuthService {
   private _registerUrl = 'http://localhost:3000/api/register';
   private _loginUrl = 'http://localhost:3000/api/login';
+  private _refreshTokenUrl = 'http://localhost:3000/api/refreshToken';
 
-  constructor(private http: HttpClient, private _router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   registerUser(user) {
     return this.http.post<any>(this._registerUrl, user);
+  }
+
+  refreshToken() {
+    return this.http.post<any>(this._refreshTokenUrl, {
+      refreshToken: this.getRefreshToken()
+    });
   }
 
   loginUser(user) {
@@ -20,15 +27,21 @@ export class AuthService {
   }
 
   loggedIn() {
-    return !!localStorage.getItem('token');
+    //   console.log('check if is logged in');
+    //   return this.http.get<boolean>('http://localhost:3000/api/isLoggedIn');
+    return !!localStorage.getItem('accessToken');
   }
 
   logoutUser() {
-    localStorage.removeItem('token');
-    this._router.navigate(['/events']);
+    localStorage.removeItem('accessToken');
+    this.router.navigate(['/applications']);
   }
 
   getToken() {
-    return localStorage.getItem('token');
+    return localStorage.getItem('accessToken');
+  }
+
+  getRefreshToken() {
+    return localStorage.getItem('refreshToken');
   }
 }

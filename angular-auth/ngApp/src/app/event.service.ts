@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class EventService {
-  private _eventsUrl = 'http://localhost:3000/api/events';
-  private _specialEventsUrl = 'http://localhost:3000/api/special';
+  private _eventsUrl = 'http://localhost:3000/api/applications';
+  private _specialEventsUrl = 'http://localhost:3000/api/special-app';
 
   constructor(private http: HttpClient) {}
 
