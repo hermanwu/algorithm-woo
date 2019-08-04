@@ -7,6 +7,9 @@ const RefreshToken = require('../models/refreshToken');
 const mongoose = require('mongoose');
 const keys = require('../../config/dev');
 
+const refreshTokenLife = '60s';
+const accessTokenLife = '10s';
+
 mongoose.connect(keys.mongoURI, err => {
   if (err) {
     console.error('Error!' + err);
@@ -74,9 +77,11 @@ router.post('/register', (req, res) => {
       console.log(error);
     } else {
       let payload = { subject: registeredUser._id };
-      let accessToken = jwt.sign(payload, 'secretKey', { expiresIn: '10s' });
+      let accessToken = jwt.sign(payload, 'secretKey', {
+        expiresIn: accessTokenLife
+      });
       let refreshToken = jwt.sign(payload, 'refreshTokenKey', {
-        expiresIn: '90s'
+        expiresIn: refreshTokenLife
       });
 
       saveRefreshToken(refreshToken);
@@ -98,7 +103,9 @@ router.post('/login', (req, res) => {
         res.status(401).send('invalid password');
       } else {
         let payload = { subject: user._id };
-        let accessToken = jwt.sign(payload, 'secretKey', { expiresIn: '10s' });
+        let accessToken = jwt.sign(payload, 'secretKey', {
+          expiresIn: accessTokenLife
+        });
         let refreshToken = jwt.sign(payload, 'refreshTokenKey', {
           expiresIn: '90s'
         });
@@ -119,26 +126,27 @@ router.post('/refreshToken', (req, res) => {
       if (!refreshTokenForDB.isValid) {
         return res.status(401).send('Unauthorized request');
       }
+
+      console.log('refresh token is still valid');
+
+      // verify the refreshToken.
+      jwt.verify(req.body.refreshToken, 'refreshTokenKey', (err, decoded) => {
+        if (err) {
+          return res.status(401).send('Unauthorized request');
+        } else {
+          console.log('refreshing access token...');
+          let accessToken = jwt.sign(
+            { subject: decoded.subject },
+            'secretKey',
+            {
+              expiresIn: accessTokenLife
+            }
+          );
+          res.status(200).send({ accessToken });
+        }
+      });
     }
   );
-  // verify the refreshToken.
-  jwt.verify(req.body.refreshToken, 'refreshTokenKey', (err, decoded) => {
-    if (err) {
-      return res.status(401).send('Unauthorized request');
-    } else {
-      let accessToken = jwt.sign({ subject: decoded.subject }, 'secretKey', {
-        expiresIn: '10s'
-      });
-      // let refreshToken = jwt.sign(
-      //   { subject: decoded.subject },
-      //   'refreshTokenKey',
-      //   {
-      //     expiresIn: '90s'
-      //   }
-      // );
-      res.status(200).send({ accessToken });
-    }
-  });
 });
 
 router.get('/applications', (req, res) => {
