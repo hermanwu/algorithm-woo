@@ -36,7 +36,7 @@ class Solution:
 
             left = i + 1
             right = len(numbers) - 1
-
+                
             while left < right:
                 sum = numbers[i] + numbers[left] + numbers[right]
                 if sum == target:
