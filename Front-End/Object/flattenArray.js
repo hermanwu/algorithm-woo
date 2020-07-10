@@ -1,4 +1,4 @@
-const flattenFunc = input => {
+const flattenFunc = (input) => {
   let result = [];
 
   // alternative for loop for (let i of input)
@@ -14,3 +14,5 @@ const flattenFunc = input => {
 };
 
 console.log(flattenFunc([1, 2, [2, 3, [5, 6]], 4]));
+
+// How to flatten array without recursion.
