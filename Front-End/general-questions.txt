@@ -1,0 +1,26 @@
+
+
+How to reduce page load time?
+- Front End
+  - Use lazy loading to resolve some request later
+    - minimize http requests
+  - Decrease each file size from backend (smaller bundle) + simaller image
+  - minify + treeshaking
+  - Add an Expires or a Cache-Control Header
+  - CSS at the top in the header, the html under css, Put javascript at the end of main html file
+  - make css javascript external
+- Backend  
+  - Caching
+  - Use DDOG to anaylze
+- Network
+  - use CDN
+  - Reduce DNS lookups
+  - Avoid redirects
+  - Use google's page speed
+
+? make AJAX cacheable
+
+
+Network
+
+What is the difference bewteen bandwidth and latency

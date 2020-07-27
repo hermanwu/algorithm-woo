@@ -2,19 +2,23 @@
  * Created by hermanwu on 2/28/18.
  */
 
-let addTwoStrings = function(str1, str2) {
+let addTwoStrings = function (str1, str2) {
+    // get length.
     let i = str1.length - 1;
     let j = str2.length - 1;
+    // track carry.
     let carry = 0;
+
+    // make result.
     let result = "";
 
     while (i >= 0 || j >= 0 || carry == 1) {
-        if ( i >= 0 ) {
+        if (i >= 0) {
             carry += str1.charAt(i) - '0';
             i--;
         }
 
-        if ( j >= 0 ) {
+        if (j >= 0) {
             carry += str2.charAt(j) - '0';
             j--;
         }
