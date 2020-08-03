@@ -33,8 +33,12 @@ const debounce = (fn, wait) => {
   let timeout;
 
   return function (...args) {
+    console.log("arg", args);
+    console.log(fn);
     clearTimeout(timeout);
-    timeout = setTimeout(() => fn.apply(this.args), wait);
+
+    // understand apply.
+    timeout = setTimeout(() => fn.apply(args), wait);
   };
 };
 
@@ -42,7 +46,9 @@ inputBox = document.getElementsByTagName("input")[0];
 
 inputBox.addEventListener(
   "keydown", // use keydown here. in html is onKeyDown
-  debounce(function () {
-    console.info("Hey! It is", new Date().toUTCString());
-  }, 3000)
+  () => {
+    debounce((action) => {
+      console.log(action);
+    }, 1000)("test");
+  }
 );
