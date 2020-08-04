@@ -44,11 +44,11 @@ const debounce = (fn, wait) => {
 
 inputBox = document.getElementsByTagName("input")[0];
 
-inputBox.addEventListener(
-  "keydown", // use keydown here. in html is onKeyDown
-  () => {
-    debounce((action) => {
-      console.log(action);
-    }, 1000)("test");
-  }
-);
+// inputBox.addEventListener(
+//   "keydown", // use keydown here. in html is onKeyDown
+//   () => {
+//     debounce(() => {
+//       console.log(this.variable);
+//     }, 1000)({ variable: "hahaha" });
+//   }
+// );
