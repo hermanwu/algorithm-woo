@@ -32,23 +32,27 @@ document.getElementsByClassName("option-list")[0].appendChild(list);
 const debounce = (fn, wait) => {
   let timeout;
 
-  return function (...args) {
-    console.log("arg", args);
-    console.log(fn);
+  return function (args) {
     clearTimeout(timeout);
 
     // understand apply.
-    timeout = setTimeout(() => fn.apply(args), wait);
+    console.log(fn);
+    console.log(args);
+    timeout = setTimeout(() => fn(args), wait);
   };
 };
 
-inputBox = document.getElementsByTagName("input")[0];
+let func = debounce(function (a, b) {
+  console.log(a);
+}, 1000);
+
+func(1, 2);
+
+// inputBox = document.getElementsByTagName("input")[0];
 
 // inputBox.addEventListener(
 //   "keydown", // use keydown here. in html is onKeyDown
-//   () => {
-//     debounce(() => {
-//       console.log(this.variable);
-//     }, 1000)({ variable: "hahaha" });
-//   }
+//   debounce(() => {
+//     console.log(this.variable);
+//   }, 1000)({ variable: "hahaha" })
 // );

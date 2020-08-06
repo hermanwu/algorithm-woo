@@ -1,5 +1,4 @@
 export {};
-export {};
 
 // does not work
 const f = () => {
