@@ -1,0 +1,2 @@
+- Create Epic for each feature that have a targeted complete time.
+- Create Epic for low priority issues.
