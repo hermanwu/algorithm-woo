@@ -1,18 +1,6 @@
-console.log("test 2");
-
-function myFunction(event) {
-  console.log(event);
-}
-
-function showElement(element) {
-  element.style.display = "block";
-}
-
-function hideElement(element) {
-  element.style.display = "none";
-}
-
 //hideElement(testDiv);
+
+const allItemArray = ["coffee", "tea"];
 
 function makeList(array) {
   const list = document.createElement("ul");
@@ -26,8 +14,11 @@ function makeList(array) {
   return list;
 }
 
-const list = makeList(["coffee", "tea"]);
-document.getElementsByClassName("option-list")[0].appendChild(list);
+const existingList = makeList(allItemArray);
+
+const listParent = document.getElementsByClassName("option-list")[0];
+
+listParent.appendChild(existingList);
 
 const debounce = (fn, wait) => {
   let timeout;
@@ -36,23 +27,24 @@ const debounce = (fn, wait) => {
     clearTimeout(timeout);
 
     // understand apply.
-    console.log(fn);
-    console.log(args);
     timeout = setTimeout(() => fn(args), wait);
   };
 };
 
-let func = debounce(function (a, b) {
-  console.log(a);
-}, 1000);
+const filter = (input) => {
+  const str = input.key;
+  const updatedArray = allItemArray.filter((item) => item.indexOf(str) > -1);
+  updatedList = makeList(updatedArray);
+  listParent.replaceChild(updatedList, listParent.firstChild);
+};
 
-func(1, 2);
+const callBack = debounce(filter, 1000);
 
-// inputBox = document.getElementsByTagName("input")[0];
+inputBox = document.getElementsByTagName("input")[0];
 
-// inputBox.addEventListener(
-//   "keydown", // use keydown here. in html is onKeyDown
-//   debounce(() => {
-//     console.log(this.variable);
-//   }, 1000)({ variable: "hahaha" })
-// );
+inputBox.addEventListener(
+  "keydown", // use keydown here. in html is onKeyDown
+  (event) => {
+    callBack(event);
+  }
+);
