@@ -18,3 +18,13 @@ Map Reduce
 堆（Heap）
 布隆过滤器（BloomFilter）
 位图（Bitmap）
+
+那这样的 Map reduce 系统有什么好处呢？
+其实 Map Reduce 并没有结余实际上的计算时间总和，但是如果你现在有很多的计算资源（很多台机器），你可以通过 Map Reduce 的框架利用多台机器同时计算，来优化性能进行提速。Map Reduce 是一套通用的分布式计算框架。这样，对于很多类似的问题，工程师并不需要每次都去自己构思如何使用多台机器优化计算的算法，只需要套用这个通用框架，就可以快速的解决问题。（比如：矩阵分解问题，Page Rank 搜索排序算法）
+
+http://vividfree.github.io/%E5%A4%A7%E8%A7%84%E6%A8%A1%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/2015/11/14/large-scale-matrix-multiplication-using-mapreduce
+
+https://blog.csdn.net/m53931422/article/details/41745175
+
+你可能会有疑问，为什么一定要使用 Map reduce 来分割文件呢，单纯的分割文件分别统计是否可行呢？
+其实是不行的。单纯的将文件 1 丢给机器 1，文件 2 丢给机器 2，分别统计 Top K 之后再合并，这种方法是不行的。因为最高频的那一项可能分别出现在文件 1 和文件 2，这样就相当于降低了其出现的频率，可能造成统计结果不对。
