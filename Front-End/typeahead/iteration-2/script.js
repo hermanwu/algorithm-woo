@@ -1,7 +1,26 @@
-//hideElement(testDiv);
-
 const allItemArray = ["coffee", "tea"];
+const listParent = document.getElementsByClassName("option-list")[0];
 
+const existingList = makeList(allItemArray);
+listParent.appendChild(existingList);
+
+// set up call back for debounce.
+const callBack = debounce(filter, 1000);
+
+// listened to the input box.
+inputBox = document.getElementsByTagName("input")[0];
+inputBox.addEventListener(
+  "keydown", // use keydown here. in html is onKeyDown
+  (event) => {
+    callBack();
+  }
+);
+
+// private functions.
+/**
+ * create a dom list.
+ * @param {*} array
+ */
 function makeList(array) {
   const list = document.createElement("ul");
   for (let i = 0; i < array.length; i++) {
@@ -14,13 +33,12 @@ function makeList(array) {
   return list;
 }
 
-const existingList = makeList(allItemArray);
-
-const listParent = document.getElementsByClassName("option-list")[0];
-
-listParent.appendChild(existingList);
-
-const debounce = (fn, wait) => {
+/**
+ * debounce helper function
+ * @param {*} fn
+ * @param {*} wait
+ */
+function debounce(fn, wait) {
   let timeout;
 
   return function (args) {
@@ -29,22 +47,17 @@ const debounce = (fn, wait) => {
     // understand apply.
     timeout = setTimeout(() => fn(args), wait);
   };
-};
+}
 
-const filter = (input) => {
-  const str = input.key;
-  const updatedArray = allItemArray.filter((item) => item.indexOf(str) > -1);
+/**
+ * filter function to append new list.
+ */
+function filter() {
+  const inputVal = document.getElementsByTagName("input")[0].value;
+  console.log(inputVal);
+  const updatedArray = allItemArray.filter(
+    (item) => item.indexOf(inputVal) > -1
+  );
   updatedList = makeList(updatedArray);
   listParent.replaceChild(updatedList, listParent.firstChild);
-};
-
-const callBack = debounce(filter, 1000);
-
-inputBox = document.getElementsByTagName("input")[0];
-
-inputBox.addEventListener(
-  "keydown", // use keydown here. in html is onKeyDown
-  (event) => {
-    callBack(event);
-  }
-);
+}
