@@ -5,7 +5,7 @@ const existingList = makeList(allItemArray);
 listParent.appendChild(existingList);
 
 // set up call back for debounce.
-const callBack = debounce(filter, 1000);
+const callBack = debounce(filterList, 1000);
 
 // listened to the input box.
 inputBox = document.getElementsByTagName("input")[0];
@@ -52,7 +52,7 @@ function debounce(fn, wait) {
 /**
  * filter function to append new list.
  */
-function filter() {
+function filterList() {
   const inputVal = document.getElementsByTagName("input")[0].value;
   console.log(inputVal);
   const updatedArray = allItemArray.filter(
