@@ -61,3 +61,5 @@ function filterList() {
   updatedList = makeList(updatedArray);
   listParent.replaceChild(updatedList, listParent.firstChild);
 }
+
+// https://dev.to/stephenafamo/how-to-create-an-autocomplete-input-with-plain-javascript
