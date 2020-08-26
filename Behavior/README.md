@@ -1,3 +1,15 @@
+Interviewee:
+
+- Ask what you are good at, find the up limit of skills.: keep ask questions.
+- Teamwork, Problem solving, Self motivation, Push for progress.
+- How to answer question: Clear logic with details.
+
+Problem solving:
+
+- Multiple method,
+- Advantage and disadvantage,
+- Under different situation, which is good.
+
 Leadership principle:
 
 常考的 LP 问题类型：
