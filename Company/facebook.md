@@ -20,3 +20,27 @@ Requirements:
 10. Global service
 11. Keep forever, consider threshold to remove old posts.
 12. Reliable and scalable
+
+Trie 211. Design Add and Search Words Data Structure
+https://leetcode.com/problems/design-add-and-search-words-data-structure/
+
+# Algorithm
+
+## DFS
+
+200: https://leetcode.com/problems/number-of-islands/discuss/56340/Python-Simple-DFS-Solution
+
+## Two pointer
+
+42, trap water
+380,
+438
+317
+1570
+
+Instagram Design
+
+Behavior:
+Proud Project
+past experience
+conflicts
