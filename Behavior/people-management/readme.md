@@ -8,3 +8,12 @@ Meeting Achievement:
 
 - What issue trying to solve.
 - What action needs to take.
+
+How to avoid conflict and make decision:
+
+- Understand the motivation behind things.
+
+What to do during discussion:
+
+- Think of an result/answer before making an question.
+- Company is hiring people for making progress
