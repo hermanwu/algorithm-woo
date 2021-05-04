@@ -14,13 +14,15 @@ function isSymmetric(root: TreeNode | null): boolean {
     return true;
   }
 
+  // Divide and concquer + left right middle handling.
   return isTwoNodeSymmetic(root.left, root.right);
 }
 
 function isTwoNodeSymmetic(
   node1: TreeNode | null,
-  node2: TreeNode | null
+  node2: TreeNode | null,
 ): boolean {
+  // Make sure it has terminate condition.
   if (node1 === null && node2 === null) {
     return true;
   }
