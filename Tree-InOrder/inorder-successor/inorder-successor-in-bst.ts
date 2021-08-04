@@ -12,4 +12,15 @@ class TreeNode {
 function inorderSuccessor(
   root: TreeNode | null,
   p: TreeNode | null
-): TreeNode | null {}
+): TreeNode | null {
+  if (root === null) {
+    return null;
+  }
+
+  if (root.val < p.val) {
+    return inorderSuccessor(root.right, p);
+  } else {
+    const left = inorderSuccessor(root.left, p);
+    return left ? left : root;
+  }
+}
