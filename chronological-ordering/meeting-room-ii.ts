@@ -19,4 +19,30 @@ Constraints:
 1 <= intervals.length <= 104
 0 <= starti < endi <= 106
 */
-function minMeetingRooms(intervals: number[][]): number {}
+function minMeetingRooms(intervals: number[][]): number {
+  const start = [];
+  const end = [];
+
+  for (let interval of intervals) {
+    start.push(interval[0]);
+    end.push(interval[1]);
+  }
+
+  start.sort((a, b) => a - b);
+  end.sort((a, b) => a - b);
+  let rooms = 0;
+  let endIndex = 0;
+
+  for (let i = 0; i < start.length; i++) {
+    // whenever there is a start meeting, we need to add one room.
+    //  But before adding rooms, we check to see if any previous meeting ends,
+    //  which is why we check start with the first end. When the start is bigger
+    //  than end, it means at this time one of the previous meeting ends,
+    //  and it can take and reuse that room.
+    rooms += 1;
+    if (start[i] >= end[endIndex]) {
+      rooms -= 1;
+      endIndex += 1;
+    }
+  }
+}
