@@ -45,4 +45,5 @@ function minMeetingRooms(intervals: number[][]): number {
       endIndex += 1;
     }
   }
+  return rooms;
 }
