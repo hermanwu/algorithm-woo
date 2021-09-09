@@ -36,7 +36,7 @@
  */
 function maxProfit(prices: number[], fee: number): number {
   let noStock = 0;
-  let hasStock = prices[0];
+  let hasStock = -prices[0];
 
   for (let price of prices) {
     let oldNoStock = noStock;
