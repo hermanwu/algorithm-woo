@@ -11,31 +11,31 @@
 
  */
 
-var addTwoNumbers = function(l1, l2) {
-    let dummy = new ListNode(-1);
-    let temp = dummy;
-    let carry = 0;
+var addTwoNumbers = function (l1, l2) {
+  let dummy = new ListNode(-1);
+  let temp = dummy;
+  let carry = 0;
 
-    while (l1 !== null || l2 !== null) {
-        if (l1 !== null) {
-            carry += l1.val;
-            l1 = l1.next;
-        }
-
-        if (l2 !== null) {
-            carry += l2.val;
-            l2 = l2.next;
-        }
-
-        temp.next = new ListNode(carry % 10);
-        temp = temp.next;
-
-        carry = Math.floor(carry / 10);
+  while (l1 !== null || l2 !== null) {
+    if (l1 !== null) {
+      carry += l1.val;
+      l1 = l1.next;
     }
 
-    if (carry === 1) {
-        temp.next = new ListNode(1);
+    if (l2 !== null) {
+      carry += l2.val;
+      l2 = l2.next;
     }
 
-    return dummy.next;
+    temp.next = new ListNode(carry % 10);
+    temp = temp.next;
+
+    carry = Math.floor(carry / 10);
+  }
+
+  if (carry === 1) {
+    temp.next = new ListNode(1);
+  }
+
+  return dummy.next;
 };

@@ -1,5 +1,0 @@
-What is a kernel?
-- kernel is an operating system for Jupyter's notebook.
-
-What is iPython notework?
-- a Jupyter notebook imbedded in python.

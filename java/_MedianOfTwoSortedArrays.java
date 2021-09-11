@@ -1,6 +1,7 @@
 /**
  * Created by hermanwu on 4/4/18.
  */
+ 
 public class _MedianOfTwoSortedArrays {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int sum = nums1.length + nums2.length;

@@ -1,25 +1,42 @@
-//
-// Binary trees are already defined with this interface:
-// function Tree(x) {
-//   this.value = x;
-//   this.left = null;
-//   this.right = null;
-// }
-function isTreeSymmetric(t) {
-  if (!t) {
-    return true;
+class TreeNode {
+  val: number;
+  left: TreeNode | null;
+  right: TreeNode | null;
+  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
   }
-
-  return recur(t.left, t.right);
 }
 
-function recur(left, right) {
-  if (!left && !right) {
+function isSymmetric(root: TreeNode | null): boolean {
+  if (root === null) {
     return true;
   }
-  if (left && right && left.value === right.value) {
-    return recur(left.right, right.left) && recur(left.left, right.right);
+
+  // Divide and concquer + left right middle handling.
+  return isTwoNodeSymmetic(root.left, root.right);
+}
+
+function isTwoNodeSymmetic(
+  node1: TreeNode | null,
+  node2: TreeNode | null,
+): boolean {
+  // Make sure it has terminate condition.
+  if (node1 === null && node2 === null) {
+    return true;
   }
 
-  return false;
+  if (node1 === null || node2 === null) {
+    return false;
+  }
+
+  if (node1.val !== node2.val) {
+    return false;
+  }
+
+  return (
+    isTwoNodeSymmetic(node1.left, node2.right) &&
+    isTwoNodeSymmetic(node1.right, node2.left)
+  );
 }
