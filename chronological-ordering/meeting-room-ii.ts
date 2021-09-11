@@ -23,6 +23,7 @@ function minMeetingRooms(intervals: number[][]): number {
   const start = [];
   const end = [];
 
+  // Separate start and end into two arrays.
   for (let interval of intervals) {
     start.push(interval[0]);
     end.push(interval[1]);
