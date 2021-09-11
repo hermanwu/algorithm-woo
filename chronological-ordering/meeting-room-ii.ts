@@ -31,6 +31,7 @@ function minMeetingRooms(intervals: number[][]): number {
 
   start.sort((a, b) => a - b);
   end.sort((a, b) => a - b);
+
   let rooms = 0;
   let endIndex = 0;
 

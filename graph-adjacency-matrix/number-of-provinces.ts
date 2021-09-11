@@ -28,7 +28,6 @@ isConnected[i][i] == 1
 isConnected[i][j] == isConnected[j][i]
 
  */
-
 function findCircleNum(isConnected: number[][]): number {
   let result = 0;
   const visited = new Set<number>();
