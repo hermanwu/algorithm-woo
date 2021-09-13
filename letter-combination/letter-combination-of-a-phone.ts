@@ -1,21 +1,14 @@
-/*
-
-Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
-
-A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
-
-*/
-
 /**
-
-Input: "23"
-Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
-
+ * Given a string containing digits from 2-9 inclusive, return all
+ * possible letter permutations that the number could represent.
+ * Return the answer in any order.
+ *
+ * A mapping of digit to letters (just like on the telephone buttons)
+ * can be seen here: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+ * Note that 1 does not map to any letters.
+ *
+ * Leetcode: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
  */
-
-// recursion.
-// backtracking.
-// https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 
 function letterCombinationsDFS(digits: string): string[] {
   if (digits === "") {
