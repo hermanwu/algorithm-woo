@@ -9,6 +9,9 @@
  * Follow up: Can you solve it with time complexity O(height of tree)?
  */
 
+import { predecessor } from "./find-predecessor";
+import { successor } from "./find-successor";
+
 export class TreeNode {
   val: number;
   left: TreeNode | null;
@@ -18,18 +21,6 @@ export class TreeNode {
     this.left = left === undefined ? null : left;
     this.right = right === undefined ? null : right;
   }
-}
-
-export function successor(root: TreeNode) {
-  root = root.right;
-  while (root.left != null) root = root.left;
-  return root.val;
-}
-
-export function predecessor(root: TreeNode) {
-  root = root.left;
-  while (root.right != null) root = root.right;
-  return root.val;
 }
 
 /**

@@ -1,10 +1,14 @@
 export class designDoc {
-  projectValue;
+  priority;
   backgroundAndIntroduction;
+  projectValue;
   Requirements;
   nonFunctionalRequirement;
+  excludingScope;
   proposedSolution;
   alternativeSolution;
+  taskOrder;
+  estimateTime;
   testingPlan;
   testingMetric;
   monitoringPlan;

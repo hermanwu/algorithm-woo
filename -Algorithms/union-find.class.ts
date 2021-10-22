@@ -18,11 +18,6 @@ export class UnionFind {
 
   // Path compression.
   find(p: number) {
-    while (p !== this.parents[p]) {
-      this.parents[p] = this.parents[this.parents[p]];
-      p = this.parents[p];
-    }
-
     if (p !== this.parents[p]) {
       this.parents[p] = this.find(this.parents[p]);
     }

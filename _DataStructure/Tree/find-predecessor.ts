@@ -1,4 +1,4 @@
-import { TreeNode } from "./tree-node";
+import { TreeNode } from "./tree-node.class";
 
 export function predecessor(root: TreeNode) {
   root = root.left;
