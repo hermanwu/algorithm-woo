@@ -41,6 +41,8 @@ function intervalIntersection(
   let j = 0;
 
   while (i < firstList.length && j < secondList.length) {
+    // get the largest of both left side;
+    // get the smallest of both right sides;
     let low = Math.max(firstList[i][0], secondList[j][0]);
     let high = Math.min(firstList[i][1], secondList[j][1]);
 
