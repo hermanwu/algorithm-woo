@@ -1,19 +1,24 @@
 export class MonotonicQueue {
   queue = [];
 
-  push(value) {
-    while (this.queue.length > 0 && value > this.queue[0]) {
+  constructor() {}
+
+  push(val) {
+    while (this.queue.length > 0 && val > this.queue[0]) {
       this.queue.shift();
     }
-    this.queue.push(value);
+    this.queue.unshift(val);
   }
 
-  // pop largest value in the queue.
-  pop() {
-    this.queue.shift();
+  pop(): void {
+    this.queue.pop();
   }
 
   getMax(): number {
-    return this.queue[0];
+    if (this.queue.length > 0) {
+      return this.queue[this.queue.length - 1];
+    } else {
+      return -1;
+    }
   }
 }
