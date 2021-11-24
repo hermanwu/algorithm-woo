@@ -35,11 +35,6 @@ export class TreeNode {
  * @returns
  */
 function deleteNode(root: TreeNode | null, key: number): TreeNode | null {
-  //  Design a recursive call that pass in enough information (Whether those information is good to store globally).
-  return helper(root, key);
-}
-
-function helper(root: TreeNode | null, key: number): TreeNode | null {
   // In the recursive method, handle null condition and terminate condition.
   if (root === null) {
     return null;
@@ -48,12 +43,12 @@ function helper(root: TreeNode | null, key: number): TreeNode | null {
   // Divide and conquer:  handle three branches: Left child node, right child node, and middle node (order can definitely be changed).
   // Handle left node
   if (key > root.val) {
-    root.right = helper(root.right, key);
+    root.right = deleteNode(root.right, key);
   }
 
   // Handle right node.
   else if (key < root.val) {
-    root.left = helper(root.left, key);
+    root.left = deleteNode(root.left, key);
   } else {
     // Handle both null.
     // Terminate condition.
@@ -61,10 +56,10 @@ function helper(root: TreeNode | null, key: number): TreeNode | null {
       root = null;
     } else if (root.right != null) {
       root.val = successor(root);
-      root.right = helper(root.right, root.val);
+      root.right = deleteNode(root.right, root.val);
     } else {
       root.val = predecessor(root);
-      root.right = helper(root.left, root.val);
+      root.right = deleteNode(root.left, root.val);
     }
   }
 

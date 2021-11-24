@@ -6,3 +6,8 @@
 - talent workers (friends are responsible)
 - product is amazing.
 - Passionate about this field.
+
+2. Why this position:
+
+- similiar experience.
+- Technology that I use.
