@@ -1,9 +1,14 @@
+/**
+ * https://iq.opengenus.org/monotonic-queue/
+ */
+
 export class MonotonicQueue {
   queue = [];
 
   constructor() {}
 
   push(val) {
+    // condition to remove useless information.
     while (this.queue.length > 0 && val > this.queue[0]) {
       this.queue.shift();
     }
