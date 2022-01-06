@@ -16,7 +16,7 @@ p != q
 p and q will exist in the tree.
  */
 
-import { TreeNode } from "../../Tree/TreeNode/tree-node";
+import { TreeNode } from "./tree-node.class";
 
 // Definition for a binary tree node.
 
@@ -32,11 +32,20 @@ function lowestCommonAncestor(
   const left = lowestCommonAncestor(root.left, p, q);
   const right = lowestCommonAncestor(root.right, p, q);
 
-  if (left !== null || right !== null) {
+  if (left !== null && right !== null) {
     return root;
   }
 
-  return left !== null ? left : right;
+  if (left === null && right === null) {
+    // Not found.
+    return null;
+  }
+
+  if (left) {
+    return left;
+  }
+
+  return right;
 }
 
 /** 

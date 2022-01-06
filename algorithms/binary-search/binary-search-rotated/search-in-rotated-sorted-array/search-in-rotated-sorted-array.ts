@@ -1,6 +1,7 @@
 /**
  * 33. Search in Rotated Sorted Array
  * https://leetcode.com/problems/search-in-rotated-sorted-array/
+ * https://stackblitz.com/edit/typescript-azvjfb
  *
  * There is an integer array nums sorted in ascending order (with distinct values).
  * Prior to being passed to your function, nums is rotated at an
