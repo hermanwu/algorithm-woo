@@ -1,3 +1,7 @@
+/**
+ * 1059. All Paths from Source Lead to Destination
+ */
+
 const leadsToDestination = (n, edges, source, destination) => {
   // First, build an adjacency list for efficient access
   const adj = new Map();
