@@ -3,8 +3,6 @@
 
 Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.
 
- 
-
 Example 1:
 
 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1]
@@ -30,4 +28,22 @@ popped.length == pushed.length
 popped is a permutation of pushed.
  */
 
-function validateStackSequences(pushed: number[], popped: number[]): boolean {}
+function validateStackSequences(pushed: number[], popped: number[]): boolean {
+  const stack = [];
+  let j = 0;
+
+  for (let i = 0; i < pushed.length; i++) {
+    stack.push(pushed[i]);
+
+    while (
+      stack.length > 0 &&
+      j < popped.length &&
+      stack[stack.length - 1] === popped[j]
+    ) {
+      stack.pop();
+      j += 1;
+    }
+  }
+
+  return j === popped.length;
+}

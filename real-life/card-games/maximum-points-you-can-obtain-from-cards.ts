@@ -40,4 +40,30 @@ Constraints:
 1 <= cardPoints[i] <= 104
 1 <= k <= cardPoints.length
  */
-function maxScore(cardPoints: number[], k: number): number {}
+
+// console.log(maxScore([1,2,3,4,5,6,1], 3)) // 12
+
+function maxScore(cardPoints: number[], k: number): number {
+  let prefixSum = [];
+  let count = cardPoints.length;
+  for (let i = 0; i < cardPoints.length; i++) {
+    const sum = (prefixSum[i - 1] ? prefixSum[i - 1] : 0) + cardPoints[i];
+    prefixSum.push(sum);
+  }
+
+  if (k === count) {
+    return prefixSum[count - 1];
+  }
+
+  const len = count - k;
+  let minVal = prefixSum[count - 1];
+
+  for (let j = len - 1; j < count; j++) {
+    const end = prefixSum[j];
+    const start = j - len >= 0 ? prefixSum[j - len] : 0;
+
+    minVal = Math.min(minVal, end - start);
+  }
+
+  return prefixSum[count - 1] - minVal;
+}
