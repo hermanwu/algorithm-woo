@@ -21,14 +21,49 @@ class TreeNode {
 }
 
 function verticalOrder(root: TreeNode | null): number[][] {
-  return [[]];
+  if (root === null) {
+    return [];
+  }
+
+  const map = new Map();
+  let min = 0;
+  let max = 0;
+
+  let queue = [];
+  let newQueue = [];
+
+  queue.push([root, 0]);
+
+  while (queue.length > 0) {
+    for (let item of queue) {
+      const node = item[0];
+      const col = item[1];
+
+      if (map.has(col) === false) {
+        map.set(col, []);
+      }
+
+      map.get(col).push(node.val);
+
+      min = Math.min(min, col);
+      max = Math.max(max, col);
+
+      if (node.left) {
+        newQueue.push([node.left, col - 1]);
+      }
+
+      if (node.right) {
+        newQueue.push([node.right, col + 1]);
+      }
+    }
+
+    queue = newQueue;
+    newQueue = [];
+  }
+
+  const result = [];
+  for (let i = min; i <= max; i++) {
+    result.push(map.get(i));
+  }
+  return result;
 }
-
-// const root = new TreeNode(3);
-// const left = new TreeNode(9);
-// const right = new TreeNode(20, new TreeNode(15), new TreeNode(7));
-
-// root.left = left;
-// root.right = right;
-
-// console.log(verticalOrder(root)); // Expect [[9],[3,15],[20],[7]]
