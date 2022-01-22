@@ -15,10 +15,15 @@ https: function findKthLargest(nums: number[], k: number): number {
 
     [nums[pivot], nums[storedIndex]] = [nums[storedIndex], nums[pivot]];
 
-    if (storedIndex === K) return nums[storedIndex];
+    if (storedIndex === K) {
+      return nums[storedIndex];
+    }
 
-    if (K > storedIndex) return quickSelect(storedIndex + 1, high, K);
-    else return quickSelect(low, storedIndex - 1, K);
+    if (K > storedIndex) {
+      return quickSelect(storedIndex + 1, high, K);
+    } else {
+      return quickSelect(low, storedIndex - 1, K);
+    }
   };
 
   return quickSelect(0, nums.length - 1, nums.length - k);
