@@ -48,3 +48,6 @@ Behavior:
 Proud Project
 past experience
 conflicts
+Backtracking:
+
+1. Generate Parenthesis.
