@@ -18,65 +18,58 @@
  Do not return anything, modify rooms in-place instead.
  */
 export function wallsAndGates(rooms: number[][]): void {
-  const m = rooms.length;
-  const n = rooms[0].length;
-  let queue: Array<[number, number]> = [];
+  const directions = [
+    [1, 0],
+    [0, 1],
+    [0, -1],
+    [-1, 0],
+  ];
+  let m = rooms.length;
+  let n = rooms[0].length;
+  let queue = [];
+  let nextQueue = [];
+  let roomCount = 0;
+  let steps = 1;
+  const inf = 2147483647;
 
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
       if (rooms[i][j] === 0) {
         queue.push([i, j]);
       }
+
+      if (rooms[i][j] === inf) {
+        roomCount += 1;
+      }
     }
   }
 
-  // BFS
   while (queue.length > 0) {
-    const len = queue.length;
-    for (let i = 0; i < len; i++) {
-      const current = queue[0];
+    for (let pos of queue) {
+      for (let dir of directions) {
+        const newX = pos[0] + dir[0];
+        const newY = pos[1] + dir[1];
 
-      search(current, rooms, queue, m, n);
+        if (
+          newX >= 0 &&
+          newX < m &&
+          newY >= 0 &&
+          newY < n &&
+          rooms[newX][newY] === inf
+        ) {
+          rooms[newX][newY] = steps;
+          nextQueue.push([newX, newY]);
+          roomCount -= 1;
 
-      queue = queue.slice(1);
-    }
-  }
-}
-
-export function search(
-  current: [number, number],
-  rooms,
-  queue,
-  m: number,
-  n: number
-): void {
-  const neighbors = [
-    [current[0] + 1, current[1]],
-    [current[0] - 1, current[1]],
-    [current[0], current[1] + 1],
-    [current[0], current[1] - 1],
-  ];
-
-  for (let neighbor of neighbors) {
-    if (
-      neighbor[0] < 0 ||
-      neighbor[0] >= m ||
-      neighbor[1] < 0 ||
-      neighbor[1] >= n
-    ) {
-      continue;
+          if (roomCount === 0) {
+            return;
+          }
+        }
+      }
     }
 
-    if (
-      rooms[neighbor[0]][neighbor[1]] === -1 ||
-      rooms[neighbor[0]][neighbor[1]] === 0
-    ) {
-      continue;
-    }
-
-    if (rooms[neighbor[0]][neighbor[1]] === 2147483647) {
-      rooms[neighbor[0]][neighbor[1]] = rooms[current[0]][current[1]] + 1;
-      queue.push(neighbor);
-    }
+    steps += 1;
+    queue = nextQueue;
+    nextQueue = [];
   }
 }

@@ -1,41 +1,39 @@
-class LinkedNode {
-  value: number;
-  priority: number;
-  next: LinkedNode;
-
-  constructor(value, priority) {
-    this.value = value;
-    this.priority = priority;
-  }
-}
-
-class PriorityQueue {
-  first = null;
+export class Heap {
+  nums: number[];
 
   constructor() {
-    this.first = null;
+    this.nums = [];
   }
 
+  push(element) {
+      this.nums.push(element);
+      let index = this.nums.length - 1;
 
-  insert(value, priority) {
-    const newNode = new LinkedNode(value, priority);
-    if (!this.first || priority > this.first.priority) {
-      newNode.next = this.first;
-      this.first = newNode;
-    } else {
-      let pointer = this.first;
-      while (pointer.next && priority < pointer.next.priority) {
-        pointer = pointer.next;
+
+      while (index > 0) {
+          let parentIndex = Math.floor((index - 1) - 2)
+
+          if (nums[parentIndex] )
       }
-      newNode.next = pointer.next;
-      pointer.next = newNode;
-    }
   }
 
-  remove() {
-    const first = this.first;
-    this.first = this.first.next;
-    return first;
-  }
+//   pop() {
+//     const result = this.nums[0];
+//     this.nums[0] = undefined;
+//     swap();
+
+//     return result;
+//   }
+
+//   top() {
+//     return this.nums[0];
+//   }
+
+//   swap(index) {
+//     const left = index * 2 + 1;
+//     const right = index * 2 + 2;
+
+//     if (this.nums[index] >= this.nums[left]) {
+//     }
+//   }
 }
-
