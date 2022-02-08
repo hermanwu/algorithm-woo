@@ -6,7 +6,7 @@
  * Good solutions: https://abhinandandubey.github.io/posts/2019/12/15/Largest-Rectangle-In-Histogram.html
  */
 
-function largestRectangleArea(heights: number[]): number {
+export function largestRectangleArea(heights: number[]): number {
   // track index.
   const stack = [-1];
   heights.push(0);
