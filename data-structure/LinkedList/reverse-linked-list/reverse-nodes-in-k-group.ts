@@ -81,7 +81,15 @@ function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
 // const mockNull = null;
 // console.log(mockNode);
 
+<<<<<<< Updated upstream
 // console.log(reverseKGroup(mockNode, 2));
 
 // console.log(reverse(mockSingleNode));
 // console.log(reverse(mockNull));
+=======
+// const node = new ListNode(
+//   1,
+//   new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5))))
+// );
+// reverseKGroup(node, 3) // 3 -> 2 -> 1 -> 4 -> 5
+>>>>>>> Stashed changes
